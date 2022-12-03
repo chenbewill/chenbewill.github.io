@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .wrap {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    header,
+    footer ,
+    figcaption{
+        display: none;
+        }
+
+    .about {
+        /* display: flex;
+        justify-content: center;
+        flex-wrap: wrap; */
+        text-align: center;
+        padding: 30px;
+    }
+
+    .about p {
+        margin: 20px;
+        font-size: 24px;
+    }
+
+    .service {
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+    }
+    .leftList,
+    .rightList,figure{
+        margin: 10px;
+    }
+    .leftList,
+    .rightList
+     {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+
+    .leftList li {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+
+    .leftList div {
+        margin: 0 5px;
+    }
+
+    .rightList li {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        text-align: left;
+    }
+    .rightList div {
+        margin: 0 5px;
+    }
+    .leftList  img,
+    .rightList  img {
+        border-radius: 50px;
+    }
+    figure img{
+        border: 1px solid black;
+        border-radius: 15px;
+    }
+
+</style>
+<header>
+
+</header>
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h1>WhyTradersChooseUs</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quasi ea voluptatem hic sed
+                earum totam nobis sapiente dignissimos vero. Necessitatibus iusto similique soluta dicta distinctio
+                molestiae. Reprehenderit, beatae voluptatem?
+            </p>
+        </div>
+        <div class="service">
+            <ul class="leftList">
+                <li>
+                    <img src="https://picsum.photos/50/50/?random=1">
+                    <div>
+                        <h5>function</h5>
+                        <p>Lorem, ipsum dolor sit amet consectetur </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://picsum.photos/50/50/?random=2">
+                    <div>
+                        <h5>function</h5>
+                        <p>Lorem, ipsum dolor sit amet consectetur </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://picsum.photos/50/50/?random=3">
+                    <div>
+                        <h5>function</h5>
+                        <p>Lorem, ipsum dolor sit amet consectetur </p>
+                    </div>
+                </li>
+            </ul>
+            <figure>
+                <img src="https://picsum.photos/300/600/?random=7">
+                <figcaption >假圖練習</figcaption>
+            </figure>
+            <ul class="rightList">
+                <li>
+                    <img src="https://picsum.photos/50/50/?random=4">
+                    <div>
+                        <h5>function</h5>
+                        <p>Lorem, ipsum dolor sit amet consectetur </p>
+                    </div>
+
+                </li>
+                <li>
+                    <img src="https://picsum.photos/50/50/?random=5">
+                    <div>
+                        <h5>function</h5>
+                        <p>Lorem, ipsum dolor sit amet consectetur </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://picsum.photos/50/50/?random=6">
+                    <div>
+                        <h5>function</h5>
+                        <p>Lorem, ipsum dolor sit amet consectetur </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer>
+
+</footer>
+
+<body>
+
+</body>
+
+</html>
