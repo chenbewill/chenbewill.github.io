@@ -10,8 +10,6 @@ SVG 設定 不了解  >>蝦用..
 
 footer 連結link 要如何堆疊起來??  >> flex-direction col 後 使用inline style 限制高度  
 
-flex 物件 設定不同的flex-direction方向  >> 包div另外切方向
+flex 物件 設定不同的flex-direction方向 ,用戶經驗分享 方向左左右 嘗試用選取器去改變方向.. >> 包div另外切方向
 選取器  
 last-child  nth-last-child  還是不太懂  >> 給class另外處裡  
-資料來源本來想使用::after，但是會卡到原先設定樣式 >>加 p..
-
