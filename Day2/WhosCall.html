@@ -133,6 +133,7 @@
         }
 
         .mainBanner .body div div a {
+            font-weight: bold;
             height: 30px;
             width: 100px;
             display: flex;
@@ -170,12 +171,40 @@
             font-weight: bold;
         }
 
+
+
         .superiority .head strong {
             color: #00c300;
         }
 
         .superiority .head h2 {
             font-size: 36px;
+        }
+
+        .superiority .body img {
+            margin: 20px;
+
+        }
+
+        .superiority .body h3 {
+            width: 480px;
+            font-size: 36px;
+            font-weight: bolder;
+            color: #00c300;
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        .markable_g {
+            color: #00c300;
+            background-image: linear-gradient(0deg, #79FF79 0%, transparent 50%);
+        }
+
+        .superiority .body p {
+            width: 480px;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: left;
         }
 
         .mainBanner .foot {
@@ -209,7 +238,6 @@
 
         .serviceImg {
             height: 100px;
-
         }
 
         .userExp {
@@ -230,6 +258,10 @@
 
         .userExp-item {
             display: flex;
+        }
+
+        .userExp-item .markable_g {
+            color: black;
         }
 
         .userExp-item article {
@@ -257,7 +289,7 @@
             justify-content: flex-end;
         }
 
-        /* 不會用拉~~~ */
+        /* 物件不同方向不會用拉~~~ */
         .userExp-item article div {
             width: 100%;
             display: flex;
@@ -311,7 +343,8 @@
             opacity: 1;
 
         }
-        .privacyPolicy{
+
+        .privacyPolicy {
             opacity: 0.7;
         }
 
@@ -437,7 +470,17 @@
         .sumit button:hover {
             cursor: pointer;
         }
+
+        .superiority .body article {
+            text-align: left;
+        }
+
+
+        .markable_w {
+            background-image: linear-gradient(0deg, white 0%, transparent 50%);
+        }
     </style>
+
 </head>
 
 <body>
@@ -467,7 +510,7 @@
                 </div>
                 <div class="body">
                     <div>
-                        <h1>WhosCall認證號碼</h1>
+                        <h1 class="markable_w">WhosCall認證號碼</h1>
                         <p>電話接通前 </p>
                         <p>專業形象開場</p>
                         <div>
@@ -493,25 +536,27 @@
                         <s>
                             超過<strong>60%</strong>的民眾會選擇忽視或拒接陌生來電。</s>
                     </h2>
+                    <small>※Pollster 波仕特線上市調 (2014)</small>
                 </div>
                 <div class="body">
                     <section>
                         <article>
-                            <h3>提高2倍電話接聽意願</h3>
+                            <h3>提高<span class="markable_g">2倍</span>電話接聽意願</h3>
                             <p>Whoscall 認證號碼讓您在全台百萬用戶的來電視窗，顯示公司名稱、姓名等資訊。從此不再是客戶的陌生來電！</p>
+                            <small>※Whoscall 調查 (2018)</small>
                         </article>
                         <img src="/HomeWork/Day2/imgSource/asset 0.webp" alt="">
                     </section>
                     <section>
                         <article>
-                            <h3>創造主動回撥的潛在客戶</h3>
+                            <h3>創造主動<span class="markable_g">回撥</span>的潛在客戶</h3>
                             <p>在來電記錄中，留下最佳企業形象，創造客戶主動聯繫的契機。</p>
                         </article>
                         <img src="/HomeWork/Day2/imgSource/asset 1.webp" alt="">
                     </section>
                     <section>
                         <article>
-                            <h3>眾多來電一秒看見</h3>
+                            <h3>眾多來電<span class="markable_g">一秒</span>看見</h3>
                             <p>不在客戶的通訊錄裡，也能於通話紀錄顯示企業資訊，輕鬆提升工作效率與拓客成功率。</p>
                         </article>
                         <img src="/HomeWork/Day2/imgSource/asset 2.webp" alt="">
@@ -557,7 +602,8 @@
                         </div>
 
                         <h3>沒想到更多客戶主動回電！</h3>
-                        <p>申請 Whoscall 認證號碼後，業務撥打出去的未接來電，客戶更樂意回電了，保險方案的介紹與推動也比以前更即時有效！</p>
+                        <p>申請 Whoscall 認證號碼後，<span class="markable_g">業務撥打出去的未接來電，客戶更樂意回電了</span>，保險方案的介紹與推動也比以前更即時有效！
+                        </p>
                         <img src="./imgSource/國泰人壽.png" alt="">
                     </article>
                     <article>
@@ -566,7 +612,8 @@
                         </div>
 
                         <h3>高接聽率讓合作更有效率！</h3>
-                        <p>設定 Whoscall 認證號碼後，電商客戶的接聽率明顯比以前高很多！和客戶討論案子的速度更順利、也更能即時給客戶完整的營運建議！</p>
+                        <p>設定 Whoscall 認證號碼後，<span
+                                class="markable_g">電商客戶的接聽率明顯比以前高很多</span>！和客戶討論案子的速度更順利、也更能即時給客戶完整的營運建議！</p>
                         <img src="./imgSource/91App.png" alt="">
                     </article>
                     <article>
@@ -575,7 +622,8 @@
                         </div>
 
                         <h3>接聽意願提高，配送更快速！</h3>
-                        <p>透過 Ｗhoscall Number 服務，讓顧客接聽意願變高，也讓我們的物流司機更容易掌握顧客的狀況，網購商品能更即時且有效率的送達。</p>
+                        <p>透過 Ｗhoscall Number 服務，讓顧客接聽意願變高，也讓我們的<span
+                                class="markable_g">物流司機更容易掌握顧客的狀況</span>，網購商品能更即時且有效率的送達。</p>
                         <img src="./imgSource/PChome.png" alt="">
                     </article>
                 </div>
