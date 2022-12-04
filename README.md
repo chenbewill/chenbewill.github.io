@@ -8,7 +8,7 @@
 
 SVG 設定 不了解  >>蝦用..  
 
-footer ul flex 要如何堆疊起來??  >> flex-direction col 後 使用inline style 限制高度  
+footer 連結link 要如何堆疊起來??  >> flex-direction col 後 使用inline style 限制高度  
 
 flex 物件 設定不同的flex-direction方向  >> 包div另外切方向
 選取器  
