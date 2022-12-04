@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+        }
+
+        .list,
+        .main_Pic {
+            width: 380px;
+            margin: 10px;
+        }
+        .list{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .list:first-child .list_Item {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .list:first-child .text {
+            text-align: right;
+        }
+
+        .list:first-child .pic {
+            margin: auto 10px;
+        }
+
+        .list:last-child .list_Item {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .list:last-child .pic {
+            margin: auto 10px;
+        }
+
+        .list:last-child .text {
+            text-align: left;
+        }
+
+        .main_Pic img {
+            width: 100%;
+            max-height: 60vh;
+            min-height: 600px;            
+        }
+    </style>
+</head>
+
+<body>
+    <article class="container">
+        <div class="title">
+            <h1>title</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi odit eligendi culpa officia sit alias
+                aspernatur, voluptates voluptas adipisci laudantium earum beatae. Architecto dignissimos voluptate
+                obcaecati laboriosam officiis vitae id!</p>
+        </div>
+        <div class="content">
+            <!-- 左側 -->
+            <div class="list">
+                <li class="list_Item">
+                    <div class="pic">
+                        <img src="https://fakeimg.pl/100x100/200">
+                    </div>
+                    <div class="text">
+                        <h2>TTTTTTT</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur beatae qui sapiente
+                            architecto minima esse dicta recusandae deserunt eius, deleniti vero natus incidunt quisquam
+                            cupiditate eligendi molestias, dolorum ea laboriosam?</p>
+                    </div>
+                </li>
+                <li class="list_Item">
+                    <div class="pic">
+                        <img src="https://fakeimg.pl/100x100/200">
+                    </div>
+                    <div class="text">
+                        <h2>TTTTTTT</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur beatae qui sapiente
+                            architecto minima esse dicta recusandae deserunt eius, deleniti vero natus incidunt quisquam
+                            cupiditate eligendi molestias, dolorum ea laboriosam?</p>
+                    </div>
+                </li>
+                <li class="list_Item">
+                    <div class="pic">
+                        <img src="https://fakeimg.pl/100x100/200">
+                    </div>
+                    <div class="text">
+                        <h2>TTTTTTT</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur beatae qui sapiente
+                            architecto minima esse dicta recusandae deserunt eius, deleniti vero natus incidunt quisquam
+                            cupiditate eligendi molestias, dolorum ea laboriosam?</p>
+                    </div>
+                </li>
+            </div>
+            <!-- 主要圖片 -->
+            <div class="main_Pic">
+
+
+                <img src="https://fakeimg.pl/300x600/200">
+
+            </div>
+            <!-- 右側 -->
+            <div class="list">
+                <li class="list_Item">
+                    <div class="pic">
+                        <img src="https://fakeimg.pl/100x100/200">
+                    </div>
+                    <div class="text">
+                        <h2>TTTTTTT</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur beatae qui sapiente
+                            architecto minima esse dicta recusandae deserunt eius, deleniti vero natus incidunt quisquam
+                            cupiditate eligendi molestias, dolorum ea laboriosam?</p>
+                    </div>
+                </li>
+                <li class="list_Item">
+                    <div class="pic">
+                        <img src="https://fakeimg.pl/100x100/200">
+                    </div>
+                    <div class="text">
+                        <h2>TTTTTTT</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur beatae qui sapiente
+                            architecto minima esse dicta recusandae deserunt eius, deleniti vero natus incidunt quisquam
+                            cupiditate eligendi molestias, dolorum ea laboriosam?</p>
+                    </div>
+                </li>
+                <li class="list_Item">
+                    <div class="pic">
+                        <img src="https://fakeimg.pl/100x100/200">
+                    </div>
+                    <div class="text">
+                        <h2>TTTTTTT</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur beatae qui sapiente
+                            architecto minima esse dicta recusandae deserunt eius, deleniti vero natus incidunt quisquam
+                            cupiditate eligendi molestias, dolorum ea laboriosam?</p>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </article>
+</body>
+
+</html>
