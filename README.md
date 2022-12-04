@@ -12,4 +12,5 @@ footer ul flex 要如何堆疊起來??  >> flex-direction col 後 使用inline s
 flex 物件 設定不同的flex-direction方向  >> 包div另外切方向
 
 選取器  
-last-child  nth-last-child  還是不太懂 >> 給class另外處裡
+last-child  nth-last-child  還是不太懂 >> 給class另外處裡  
+::after >>加 P...
