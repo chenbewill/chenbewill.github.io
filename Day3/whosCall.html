@@ -35,7 +35,9 @@
             </li>
         </ul>
         <div class="downloadlink">
-            <a href="#">免費下載</a>
+            <label for="QRCode-control">
+                <a>免費下載</a>
+            </label>
         </div>
     </nav>
     <main>
@@ -317,9 +319,16 @@
 
         </div>
     </footer>
-    <script>
-
-    </script>
+    <input type="checkbox" id="QRCode-control" style="display: none;">
+    <div class="Full-View">
+        <div class="QR_Code">
+            <label for="QRCode-control">
+                <p>X</p>
+            </label>
+            <img src="./imgSource/QRCode.png" alt="">
+            <p>掃描下載 <b>Whoscall</b> </p>
+        </div>
+    </div>
 </body>
 
 </html>

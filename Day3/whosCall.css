@@ -547,3 +547,55 @@ h1.hightline {
     margin-top: -100px;
 
 }
+.Full-View {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.Full-View .QR_Code {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+#QRCode-control:checked+.Full-View {
+    display: none;
+}
+
+.Full-View .QR_Code > p:last-child {
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.QR_Code label{
+    width: 250px;
+    text-align: right;
+    position: relative;
+}
+.QR_Code label p{
+    font-size: 20px;
+}
+.QR_Code b{
+    color:#00c300;
+}
+.QR_Code img{
+    width: 200px;
+    height: 200px;
+}
