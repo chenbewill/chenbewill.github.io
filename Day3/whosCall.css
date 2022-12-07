@@ -551,7 +551,7 @@ h1.hightline {
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 0, 0, 0.7);
@@ -574,7 +574,7 @@ h1.hightline {
     text-align: center;
 }
 #QRCode-control:checked+.Full-View {
-    display: none;
+    display: flex;
 }
 
 .Full-View .QR_Code > p:last-child {
