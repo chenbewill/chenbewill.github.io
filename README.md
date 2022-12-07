@@ -23,4 +23,4 @@ ans:一個頁面只有一個h1，其他可以重複使用
 ans:div沒設定作用就是多包的
 圖片轉方向  
 ans:transform
-[WhosCall認證號碼](https://chenbewill.github.io/Day3/WhosCall.html)  
+[WhosCall認證號碼](https://chenbewill.github.io/Day3/whosCall.html)  
