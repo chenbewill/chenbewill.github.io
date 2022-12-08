@@ -134,6 +134,10 @@ main {
 .banner-bottom {
     align-self: flex-end;
 }
+.banner-bottom img{
+    vertical-align: bottom;
+
+}
 
 /* ===================exclusive============================= */
 .section-exclusive {
