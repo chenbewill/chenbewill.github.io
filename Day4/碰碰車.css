@@ -22,7 +22,8 @@ main {
 section {
     margin-bottom: 50px;
 }
-.main_Banner{
+
+.main_Banner {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,11 +31,31 @@ section {
     width: 100%;
 }
 
-.main_Banner img {
+.main_Banner .main_Pic {
     width: 695px;
 }
-.section_Exp:nth-child(even) .main_Banner{
-    padding:0 80px 0 0
+
+.main_Banner a img {
+    border-radius: 2px;
+    height: 30px;
+    width: 50px;
+}
+
+.main_Banner a {
+    position: relative;
+    right: 45px;
+}
+
+.section_Exp:nth-child(even) a {
+    right: 700px;
+
+}
+
+
+
+.section_Exp:nth-child(even) .main_Banner {
+    /* flex-direction: row-reverse; */
+    padding: 0 80px 0 0
 }
 
 /* ==========.main_Article============= */
@@ -47,7 +68,8 @@ section {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.section_Exp:nth-child(even) .card{
+
+.section_Exp:nth-child(even) .card {
     flex-direction: row-reverse;
 }
 
@@ -59,7 +81,8 @@ section {
     background-color: rgb(146, 11, 11);
     height: fit-content;
 }
-.section_Exp:nth-child(even) .card .main_Article{
+
+.section_Exp:nth-child(even) .card .main_Article {
     flex-direction: row-reverse;
 }
 
@@ -98,9 +121,10 @@ section {
     background-color: rgba(101, 93, 93, 0.2);
     z-index: -1;
 }
+
 .section_Exp:nth-child(even) .gray_Area {
-    position:absolute;
-    right:50px;
+    position: absolute;
+    right: 50px;
     top: 20px;
 }
 
@@ -108,13 +132,14 @@ section {
 /* =====change_Text============== */
 .change_Info {
     position: relative;
-    top: -35px;
+    top: -34px;
     background-color: #F0F0F0;
     width: 680px;
     text-align: left;
-    padding: 12px 24px;
+    padding: 10px 24px;
     margin: 0 0 0 50px;
 }
+
 .section_Exp:nth-child(even) .change_Info {
     margin-left: auto;
 }
@@ -122,9 +147,10 @@ section {
 .change_Info .title {
     color: rgb(146, 11, 11);
     display: flex;
+    font-weight: bolder;
     flex-wrap: wrap;
     align-items: center;
-    margin: 12px 0;
+    margin: 10px 0;
 }
 
 .change_Info .title::after {
@@ -134,10 +160,11 @@ section {
     flex-grow: 1;
 }
 
-.change_Info .change_List .item  h3 {
+.change_Info .change_List .item h3 {
     font-size: 16px;
     background-color: black;
     padding: 1px 5px;
+    margin: 5px 0;
     border-radius: 3px;
     color: white;
     width: fit-content;
@@ -146,9 +173,9 @@ section {
 
 .change_Info .change_List .item p:last-child:before {
     content: "·";
-    color:rgb(146, 11, 11);
+    color: rgb(146, 11, 11);
     font-size: 26px;
+    font-weight: 100;
+
     vertical-align: middle;
 }
-
-
