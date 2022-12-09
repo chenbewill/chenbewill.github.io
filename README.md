@@ -19,4 +19,4 @@ ans:transform
 [WhosCall認證號碼](https://chenbewill.github.io/Day3/whosCall.html)  
 語意標籤，解釋使用這標籤原因  
 結構設計，只要有需要存在理由，就可以  
-[toyota五大優勢]()
+[toyota五大優勢](https://chenbewill.github.io/Day4/%E7%A2%B0%E7%A2%B0%E8%BB%8A.html)
