@@ -20,3 +20,6 @@ ans:transform
 語意標籤，解釋使用這標籤原因  
 結構設計，只要有需要存在理由，就可以  
 [toyota五大優勢](https://chenbewill.github.io/Day4/%E7%A2%B0%E7%A2%B0%E8%BB%8A.html)
+耳包沒聽清楚題目  
+注意HTML語意===>那些才是重要資料  
+1.5樣特點 ， 2.改良了那些項目  
