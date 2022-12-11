@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\ReversString\bin\Debug\ReversString.exe.config
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\ReversString\bin\Debug\ReversString.exe
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\ReversString\bin\Debug\ReversString.pdb
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\ReversString\obj\Debug\ReversString.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\ReversString\obj\Debug\ReversString.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\ReversString\obj\Debug\ReversString.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\ReversString\obj\Debug\ReversString.exe
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\ReversString\obj\Debug\ReversString.pdb

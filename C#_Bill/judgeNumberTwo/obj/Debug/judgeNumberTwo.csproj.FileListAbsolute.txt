@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\judgeNumberTwo\bin\Debug\judgeNumberTwo.exe.config
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\judgeNumberTwo\bin\Debug\judgeNumberTwo.exe
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\judgeNumberTwo\bin\Debug\judgeNumberTwo.pdb
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\judgeNumberTwo\obj\Debug\judgeNumberTwo.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\judgeNumberTwo\obj\Debug\judgeNumberTwo.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\judgeNumberTwo\obj\Debug\judgeNumberTwo.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\judgeNumberTwo\obj\Debug\judgeNumberTwo.exe
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\judgeNumberTwo\obj\Debug\judgeNumberTwo.pdb

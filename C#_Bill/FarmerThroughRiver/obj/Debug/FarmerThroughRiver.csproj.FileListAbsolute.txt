@@ -1,0 +1,11 @@
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\FarmerThroughRiver\bin\Debug\FarmerThroughRiver.exe.config
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\FarmerThroughRiver\bin\Debug\FarmerThroughRiver.exe
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\FarmerThroughRiver\bin\Debug\FarmerThroughRiver.pdb
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\FarmerThroughRiver\obj\Debug\FarmerThroughRiver.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\FarmerThroughRiver\obj\Debug\FarmerThroughRiver.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\FarmerThroughRiver\obj\Debug\FarmerThroughRiver.Form1.resources
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\FarmerThroughRiver\obj\Debug\FarmerThroughRiver.Properties.Resources.resources
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\FarmerThroughRiver\obj\Debug\FarmerThroughRiver.csproj.GenerateResource.cache
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\FarmerThroughRiver\obj\Debug\FarmerThroughRiver.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\FarmerThroughRiver\obj\Debug\FarmerThroughRiver.exe
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\FarmerThroughRiver\obj\Debug\FarmerThroughRiver.pdb

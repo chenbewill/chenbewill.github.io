@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\3_1Rounding\bin\Debug\3_1Rounding.exe.config
+C:\Users\chenb\source\repos\BuildSchool\3_1Rounding\bin\Debug\3_1Rounding.exe
+C:\Users\chenb\source\repos\BuildSchool\3_1Rounding\bin\Debug\3_1Rounding.pdb
+C:\Users\chenb\source\repos\BuildSchool\3_1Rounding\obj\Debug\3_1Rounding.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\3_1Rounding\obj\Debug\3_1Rounding.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\3_1Rounding\obj\Debug\3_1Rounding.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\3_1Rounding\obj\Debug\3_1Rounding.exe
+C:\Users\chenb\source\repos\BuildSchool\3_1Rounding\obj\Debug\3_1Rounding.pdb

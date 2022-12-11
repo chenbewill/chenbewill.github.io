@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\ReplaceContent\bin\Debug\ReplaceContent.exe.config
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\ReplaceContent\bin\Debug\ReplaceContent.exe
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\ReplaceContent\bin\Debug\ReplaceContent.pdb
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\ReplaceContent\obj\Debug\ReplaceContent.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\ReplaceContent\obj\Debug\ReplaceContent.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\ReplaceContent\obj\Debug\ReplaceContent.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\ReplaceContent\obj\Debug\ReplaceContent.exe
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\ReplaceContent\obj\Debug\ReplaceContent.pdb

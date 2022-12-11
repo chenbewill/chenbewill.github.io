@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\Multiplication\bin\Debug\Multiplication.exe.config
+C:\Users\chenb\source\repos\BuildSchool\Multiplication\bin\Debug\Multiplication.exe
+C:\Users\chenb\source\repos\BuildSchool\Multiplication\bin\Debug\Multiplication.pdb
+C:\Users\chenb\source\repos\BuildSchool\Multiplication\obj\Debug\4_Multiplication.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\Multiplication\obj\Debug\4_Multiplication.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\Multiplication\obj\Debug\4_Multiplication.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\Multiplication\obj\Debug\Multiplication.exe
+C:\Users\chenb\source\repos\BuildSchool\Multiplication\obj\Debug\Multiplication.pdb

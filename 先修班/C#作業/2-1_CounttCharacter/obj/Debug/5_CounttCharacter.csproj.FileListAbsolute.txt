@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\5_CounttCharacter\bin\Debug\5_CounttCharacter.exe.config
+C:\Users\chenb\source\repos\BuildSchool\5_CounttCharacter\bin\Debug\5_CounttCharacter.exe
+C:\Users\chenb\source\repos\BuildSchool\5_CounttCharacter\bin\Debug\5_CounttCharacter.pdb
+C:\Users\chenb\source\repos\BuildSchool\5_CounttCharacter\obj\Debug\5_CounttCharacter.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\5_CounttCharacter\obj\Debug\5_CounttCharacter.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\5_CounttCharacter\obj\Debug\5_CounttCharacter.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\5_CounttCharacter\obj\Debug\5_CounttCharacter.exe
+C:\Users\chenb\source\repos\BuildSchool\5_CounttCharacter\obj\Debug\5_CounttCharacter.pdb

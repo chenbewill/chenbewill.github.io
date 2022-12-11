@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TaxRate\bin\Debug\TaxRate.exe.config
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TaxRate\bin\Debug\TaxRate.exe
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TaxRate\bin\Debug\TaxRate.pdb
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TaxRate\obj\Debug\TaxRate.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TaxRate\obj\Debug\TaxRate.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TaxRate\obj\Debug\TaxRate.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TaxRate\obj\Debug\TaxRate.exe
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TaxRate\obj\Debug\TaxRate.pdb

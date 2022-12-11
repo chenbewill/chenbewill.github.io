@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\3_4Circle\bin\Debug\3_4Circle.exe.config
+C:\Users\chenb\source\repos\BuildSchool\3_4Circle\bin\Debug\3_4Circle.exe
+C:\Users\chenb\source\repos\BuildSchool\3_4Circle\bin\Debug\3_4Circle.pdb
+C:\Users\chenb\source\repos\BuildSchool\3_4Circle\obj\Debug\3_4Circle.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\3_4Circle\obj\Debug\3_4Circle.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\3_4Circle\obj\Debug\3_4Circle.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\3_4Circle\obj\Debug\3_4Circle.exe
+C:\Users\chenb\source\repos\BuildSchool\3_4Circle\obj\Debug\3_4Circle.pdb

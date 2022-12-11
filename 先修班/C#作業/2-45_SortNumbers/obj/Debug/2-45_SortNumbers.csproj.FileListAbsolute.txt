@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\8_SortNumbers\bin\Debug\8_SortNumbers.exe.config
+C:\Users\chenb\source\repos\BuildSchool\8_SortNumbers\bin\Debug\8_SortNumbers.exe
+C:\Users\chenb\source\repos\BuildSchool\8_SortNumbers\bin\Debug\8_SortNumbers.pdb
+C:\Users\chenb\source\repos\BuildSchool\8_SortNumbers\obj\Debug\2-45_SortNumbers.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\8_SortNumbers\obj\Debug\2-45_SortNumbers.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\8_SortNumbers\obj\Debug\2-45_SortNumbers.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\8_SortNumbers\obj\Debug\8_SortNumbers.exe
+C:\Users\chenb\source\repos\BuildSchool\8_SortNumbers\obj\Debug\8_SortNumbers.pdb

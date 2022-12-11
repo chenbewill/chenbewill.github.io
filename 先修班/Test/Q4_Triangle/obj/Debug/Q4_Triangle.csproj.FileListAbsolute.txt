@@ -1,0 +1,16 @@
+C:\Users\chenb\source\repos\BuildSchool\Q4_Triangle\bin\Debug\Q4_Triangle.exe.config
+C:\Users\chenb\source\repos\BuildSchool\Q4_Triangle\bin\Debug\Q4_Triangle.exe
+C:\Users\chenb\source\repos\BuildSchool\Q4_Triangle\bin\Debug\Q4_Triangle.pdb
+C:\Users\chenb\source\repos\BuildSchool\Q4_Triangle\obj\Debug\Q4_Triangle.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\Q4_Triangle\obj\Debug\Q4_Triangle.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\Q4_Triangle\obj\Debug\Q4_Triangle.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\Q4_Triangle\obj\Debug\Q4_Triangle.exe
+C:\Users\chenb\source\repos\BuildSchool\Q4_Triangle\obj\Debug\Q4_Triangle.pdb
+C:\Users\chenb\source\repos\BuildSchool\C#先修班\考核\Q4_Triangle\bin\Debug\Q4_Triangle.exe.config
+C:\Users\chenb\source\repos\BuildSchool\C#先修班\考核\Q4_Triangle\bin\Debug\Q4_Triangle.exe
+C:\Users\chenb\source\repos\BuildSchool\C#先修班\考核\Q4_Triangle\bin\Debug\Q4_Triangle.pdb
+C:\Users\chenb\source\repos\BuildSchool\C#先修班\考核\Q4_Triangle\obj\Debug\Q4_Triangle.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\C#先修班\考核\Q4_Triangle\obj\Debug\Q4_Triangle.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\C#先修班\考核\Q4_Triangle\obj\Debug\Q4_Triangle.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\C#先修班\考核\Q4_Triangle\obj\Debug\Q4_Triangle.exe
+C:\Users\chenb\source\repos\BuildSchool\C#先修班\考核\Q4_Triangle\obj\Debug\Q4_Triangle.pdb

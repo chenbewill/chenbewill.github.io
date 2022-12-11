@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>終極密碼</title>
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./終極密碼.css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section class="section_GuessNumber">
+            <div class="wrap">
+                <div class="main_Title">
+                    <h2>終極密碼</h2>
+                </div>
+                <div class="output_Area">
+                    <div class="range_Area">
+                        <p>目前數字範圍</p>
+                        <p class="range">0~100</p>
+                    </div>
+                    <div class="show_Input">
+                        <input type="number" class="input" placeholder="請輸入數字">
+                        </input>
+                    </div>
+                </div>
+                <div class="Number_Area">
+                    <button class="Number_item" onclick="Button_Click(this)" value="1">1</button>
+                    <button class="Number_item" onclick="Button_Click(this)" value="2">2</button>
+                    <button class="Number_item" onclick="Button_Click(this)" value="3">3</button>
+                    <button class="Number_item" onclick="Button_Click(this)" value="4">4</button>
+                    <button class="Number_item" onclick="Button_Click(this)" value="5">5</button>
+                    <button class="Number_item" onclick="Button_Click(this)" value="6">6</button>
+                    <button class="Number_item" onclick="Button_Click(this)" value="7">7</button>
+                    <button class="Number_item" onclick="Button_Click(this)" value="8">8</button>
+                    <button class="Number_item" onclick="Button_Click(this)" value="9">9</button>
+                    <button class="Number_item" onclick="Button_Click(this)" value="reset">重新輸入</button>
+                    <button class="Number_item" onclick="Button_Click(this)" value="0">0</button>
+                    <button class="Number_item" onclick="Enter()">送出</button>
+                </div>
+                <div class="Renew">
+                    <button class="Number_item" onclick="NewGame()">新遊戲</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script>
+
+        let inputNumber = document.querySelector(".input");
+        let randomNumber;
+        let range = { min: 0, max: 100 }
+        Random_number();
+        function Button_Click(sender) {
+            if (sender.value == "reset") {
+                inputNumber.value = "";
+            } else {
+                inputNumber.value += sender.innerText;
+            }
+
+        }
+        function NewGame() {
+            inputNumber.value = "";
+            Random_number();
+            document.querySelector(".output_Area .range").innerText = "0~100";
+
+        }
+        function Random_number() {
+            let num = Math.floor(Math.random() * 100);
+            randomNumber = num;
+            console.log(num);
+        }
+        function Change_Range(sender) {
+            if (sender - randomNumber >= 0) {
+                range.max = sender;
+            }
+            else {
+                range.min = sender;
+            }
+            document.querySelector(".output_Area .range").innerText = `${range.min}~${range.max}`;
+        }
+        function Enter() {
+            if (!Foolproof_Mechanism()) {
+                return;
+            }
+            Change_Range(inputNumber.value);
+            Check_Number(inputNumber.value);
+            inputNumber.value = "";
+        }
+        function Check_Number(sender) {
+            while (randomNumber == sender) {
+                alert("遊戲結束");
+                break;
+            }
+        }
+        function Foolproof_Mechanism() {
+            if (inputNumber.value == null || parseInt(inputNumber.value) > range.max || parseInt(inputNumber.value) < range.min) {
+                alert("請輸入範圍內數字");
+                inputNumber.value = "";
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

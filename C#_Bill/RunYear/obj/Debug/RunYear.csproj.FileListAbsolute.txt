@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\RunYear\bin\Debug\RunYear.exe.config
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\RunYear\bin\Debug\RunYear.exe
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\RunYear\bin\Debug\RunYear.pdb
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\RunYear\obj\Debug\RunYear.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\RunYear\obj\Debug\RunYear.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\RunYear\obj\Debug\RunYear.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\RunYear\obj\Debug\RunYear.exe
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\RunYear\obj\Debug\RunYear.pdb

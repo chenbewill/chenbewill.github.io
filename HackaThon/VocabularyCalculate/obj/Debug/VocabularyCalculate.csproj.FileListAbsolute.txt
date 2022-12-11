@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\VocabularyCalculate\bin\Debug\VocabularyCalculate.exe.config
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\VocabularyCalculate\bin\Debug\VocabularyCalculate.exe
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\VocabularyCalculate\bin\Debug\VocabularyCalculate.pdb
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\VocabularyCalculate\obj\Debug\VocabularyCalculate.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\VocabularyCalculate\obj\Debug\VocabularyCalculate.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\VocabularyCalculate\obj\Debug\VocabularyCalculate.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\VocabularyCalculate\obj\Debug\VocabularyCalculate.exe
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\VocabularyCalculate\obj\Debug\VocabularyCalculate.pdb

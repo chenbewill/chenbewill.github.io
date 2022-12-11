@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\Temperature\bin\Debug\Temperature.exe.config
+C:\Users\chenb\source\repos\BuildSchool\Temperature\bin\Debug\Temperature.exe
+C:\Users\chenb\source\repos\BuildSchool\Temperature\bin\Debug\Temperature.pdb
+C:\Users\chenb\source\repos\BuildSchool\Temperature\obj\Debug\Temperature.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\Temperature\obj\Debug\Temperature.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\Temperature\obj\Debug\Temperature.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\Temperature\obj\Debug\Temperature.exe
+C:\Users\chenb\source\repos\BuildSchool\Temperature\obj\Debug\Temperature.pdb

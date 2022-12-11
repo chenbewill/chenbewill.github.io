@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\Q3_LoopWords\bin\Debug\Q3_LoopWords.exe.config
+C:\Users\chenb\source\repos\BuildSchool\Q3_LoopWords\bin\Debug\Q3_LoopWords.exe
+C:\Users\chenb\source\repos\BuildSchool\Q3_LoopWords\bin\Debug\Q3_LoopWords.pdb
+C:\Users\chenb\source\repos\BuildSchool\Q3_LoopWords\obj\Debug\Q3_LoopWords.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\Q3_LoopWords\obj\Debug\Q3_LoopWords.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\Q3_LoopWords\obj\Debug\Q3_LoopWords.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\Q3_LoopWords\obj\Debug\Q3_LoopWords.exe
+C:\Users\chenb\source\repos\BuildSchool\Q3_LoopWords\obj\Debug\Q3_LoopWords.pdb

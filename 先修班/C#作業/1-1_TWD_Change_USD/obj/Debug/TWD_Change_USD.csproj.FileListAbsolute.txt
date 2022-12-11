@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\TWD_Change_USD\bin\Debug\TWD_Change_USD.exe.config
+C:\Users\chenb\source\repos\BuildSchool\TWD_Change_USD\bin\Debug\TWD_Change_USD.exe
+C:\Users\chenb\source\repos\BuildSchool\TWD_Change_USD\bin\Debug\TWD_Change_USD.pdb
+C:\Users\chenb\source\repos\BuildSchool\TWD_Change_USD\obj\Debug\TWD_Change_USD.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\TWD_Change_USD\obj\Debug\TWD_Change_USD.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\TWD_Change_USD\obj\Debug\TWD_Change_USD.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\TWD_Change_USD\obj\Debug\TWD_Change_USD.exe
+C:\Users\chenb\source\repos\BuildSchool\TWD_Change_USD\obj\Debug\TWD_Change_USD.pdb

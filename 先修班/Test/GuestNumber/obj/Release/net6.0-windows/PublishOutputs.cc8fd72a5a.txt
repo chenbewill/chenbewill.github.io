@@ -1,0 +1,5 @@
+C:\Release\BuildSchool\Game\WinFormsApp1.exe
+C:\Release\BuildSchool\Game\WinFormsApp1.dll
+C:\Release\BuildSchool\Game\WinFormsApp1.deps.json
+C:\Release\BuildSchool\Game\WinFormsApp1.runtimeconfig.json
+C:\Release\BuildSchool\Game\WinFormsApp1.pdb

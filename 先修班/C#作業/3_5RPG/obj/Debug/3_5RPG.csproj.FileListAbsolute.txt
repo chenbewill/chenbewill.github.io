@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\3_5RPG\bin\Debug\3_5RPG.exe.config
+C:\Users\chenb\source\repos\BuildSchool\3_5RPG\bin\Debug\3_5RPG.exe
+C:\Users\chenb\source\repos\BuildSchool\3_5RPG\bin\Debug\3_5RPG.pdb
+C:\Users\chenb\source\repos\BuildSchool\3_5RPG\obj\Debug\3_5RPG.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\3_5RPG\obj\Debug\3_5RPG.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\3_5RPG\obj\Debug\3_5RPG.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\3_5RPG\obj\Debug\3_5RPG.exe
+C:\Users\chenb\source\repos\BuildSchool\3_5RPG\obj\Debug\3_5RPG.pdb

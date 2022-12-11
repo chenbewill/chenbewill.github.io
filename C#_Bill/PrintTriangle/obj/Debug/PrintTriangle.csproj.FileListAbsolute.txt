@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\PrintTriangle\bin\Debug\PrintTriangle.exe.config
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\PrintTriangle\bin\Debug\PrintTriangle.exe
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\PrintTriangle\bin\Debug\PrintTriangle.pdb
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\PrintTriangle\obj\Debug\PrintTriangle.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\PrintTriangle\obj\Debug\PrintTriangle.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\PrintTriangle\obj\Debug\PrintTriangle.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\PrintTriangle\obj\Debug\PrintTriangle.exe
+C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\PrintTriangle\obj\Debug\PrintTriangle.pdb

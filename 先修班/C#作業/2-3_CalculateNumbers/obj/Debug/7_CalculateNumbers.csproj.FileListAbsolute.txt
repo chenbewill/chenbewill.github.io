@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\7_CalculateNumbers\bin\Debug\7_CalculateNumbers.exe.config
+C:\Users\chenb\source\repos\BuildSchool\7_CalculateNumbers\bin\Debug\7_CalculateNumbers.exe
+C:\Users\chenb\source\repos\BuildSchool\7_CalculateNumbers\bin\Debug\7_CalculateNumbers.pdb
+C:\Users\chenb\source\repos\BuildSchool\7_CalculateNumbers\obj\Debug\7_CalculateNumbers.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\7_CalculateNumbers\obj\Debug\7_CalculateNumbers.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\7_CalculateNumbers\obj\Debug\7_CalculateNumbers.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\7_CalculateNumbers\obj\Debug\7_CalculateNumbers.exe
+C:\Users\chenb\source\repos\BuildSchool\7_CalculateNumbers\obj\Debug\7_CalculateNumbers.pdb

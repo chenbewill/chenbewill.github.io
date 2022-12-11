@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\NumberJudge\bin\Debug\NumberJudge.exe.config
+C:\Users\chenb\source\repos\BuildSchool\NumberJudge\bin\Debug\NumberJudge.exe
+C:\Users\chenb\source\repos\BuildSchool\NumberJudge\bin\Debug\NumberJudge.pdb
+C:\Users\chenb\source\repos\BuildSchool\NumberJudge\obj\Debug\3_NumberJudge.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\NumberJudge\obj\Debug\3_NumberJudge.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\NumberJudge\obj\Debug\3_NumberJudge.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\NumberJudge\obj\Debug\NumberJudge.exe
+C:\Users\chenb\source\repos\BuildSchool\NumberJudge\obj\Debug\NumberJudge.pdb

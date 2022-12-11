@@ -1,0 +1,11 @@
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TransTemperature\bin\Debug\TransTemperature.exe.config
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TransTemperature\bin\Debug\TransTemperature.exe
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TransTemperature\bin\Debug\TransTemperature.pdb
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TransTemperature\obj\Debug\TransTemperature.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TransTemperature\obj\Debug\TransTemperature.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TransTemperature\obj\Debug\TransTemperature.Form1.resources
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TransTemperature\obj\Debug\TransTemperature.Properties.Resources.resources
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TransTemperature\obj\Debug\TransTemperature.csproj.GenerateResource.cache
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TransTemperature\obj\Debug\TransTemperature.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TransTemperature\obj\Debug\TransTemperature.exe
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\TransTemperature\obj\Debug\TransTemperature.pdb

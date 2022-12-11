@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\3_1Perimeter\bin\Debug\3_1Perimeter.exe.config
+C:\Users\chenb\source\repos\BuildSchool\3_1Perimeter\bin\Debug\3_1Perimeter.exe
+C:\Users\chenb\source\repos\BuildSchool\3_1Perimeter\bin\Debug\3_1Perimeter.pdb
+C:\Users\chenb\source\repos\BuildSchool\3_1Perimeter\obj\Debug\3_1Perimeter.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\3_1Perimeter\obj\Debug\3_1Perimeter.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\3_1Perimeter\obj\Debug\3_1Perimeter.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\3_1Perimeter\obj\Debug\3_1Perimeter.exe
+C:\Users\chenb\source\repos\BuildSchool\3_1Perimeter\obj\Debug\3_1Perimeter.pdb

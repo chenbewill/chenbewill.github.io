@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\8_FindNumber\obj\Debug\8_FindNumber.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\8_FindNumber\obj\Debug\8_FindNumber.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\8_FindNumber\obj\Debug\8_FindNumber.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\8_FindNumber\bin\Debug\8_FindNumber.exe.config
+C:\Users\chenb\source\repos\BuildSchool\8_FindNumber\bin\Debug\8_FindNumber.exe
+C:\Users\chenb\source\repos\BuildSchool\8_FindNumber\bin\Debug\8_FindNumber.pdb
+C:\Users\chenb\source\repos\BuildSchool\8_FindNumber\obj\Debug\8_FindNumber.exe
+C:\Users\chenb\source\repos\BuildSchool\8_FindNumber\obj\Debug\8_FindNumber.pdb

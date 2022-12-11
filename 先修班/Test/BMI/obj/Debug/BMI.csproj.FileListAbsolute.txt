@@ -1,0 +1,8 @@
+C:\Users\chenb\source\repos\BuildSchool\BMI\bin\Debug\BMI.exe.config
+C:\Users\chenb\source\repos\BuildSchool\BMI\bin\Debug\BMI.exe
+C:\Users\chenb\source\repos\BuildSchool\BMI\bin\Debug\BMI.pdb
+C:\Users\chenb\source\repos\BuildSchool\BMI\obj\Debug\BMI.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\BMI\obj\Debug\BMI.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\BMI\obj\Debug\BMI.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\BMI\obj\Debug\BMI.exe
+C:\Users\chenb\source\repos\BuildSchool\BMI\obj\Debug\BMI.pdb

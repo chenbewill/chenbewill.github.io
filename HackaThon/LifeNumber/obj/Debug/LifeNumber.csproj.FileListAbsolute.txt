@@ -1,0 +1,12 @@
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\LifeNumber\bin\Debug\LifeNumber.exe.config
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\LifeNumber\bin\Debug\LifeNumber.exe
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\LifeNumber\bin\Debug\LifeNumber.pdb
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\LifeNumber\obj\Debug\LifeNumber.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\LifeNumber\obj\Debug\LifeNumber.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\LifeNumber\obj\Debug\LifeNumber.Form1.resources
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\LifeNumber\obj\Debug\LifeNumber.Properties.Resources.resources
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\LifeNumber\obj\Debug\LifeNumber.csproj.GenerateResource.cache
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\LifeNumber\obj\Debug\LifeNumber.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\LifeNumber\obj\Debug\LifeNumber.exe
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\LifeNumber\obj\Debug\LifeNumber.pdb
+C:\Users\chenb\source\repos\BuildSchool\Hackathon\LifeNumber\bin\Debug\生命靈數.txt
