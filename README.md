@@ -3,7 +3,7 @@
 ### Day1
 [初切版](https://chenbewill.github.io/HTML&CSS_Amons/Day1/01.html)
 ### Day2
-[課表](https://chenbewill.github.io/Day2/table.html)  
+[課表](https://chenbewill.github.io/HTML&CSS_Amons/Day2/table.html)  
 [WhosCall認證號碼](https://chenbewill.github.io/HTML&CSS_Amons/Day2/WhosCall.html)  
 
 SVG 設定 不了解 >>蝦用..
