@@ -23,3 +23,4 @@ ans:transform
 耳包沒聽清楚題目  
 注意HTML語意===>那些才是重要資料  
 1.5樣特點 ， 2.改良了那些項目  
+[JavaScript](https://chenbewill.github.io/先修班/JavaScript/終極密碼.html)
