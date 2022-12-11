@@ -6,3 +6,11 @@ C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\LINQ_judgeNumber\o
 C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\LINQ_judgeNumber\obj\Debug\LINQ_judgeNumber.csproj.CoreCompileInputs.cache
 C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\LINQ_judgeNumber\obj\Debug\LINQ_judgeNumber.exe
 C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\LINQ_judgeNumber\obj\Debug\LINQ_judgeNumber.pdb
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LINQ_judgeNumber\bin\Debug\LINQ_judgeNumber.exe.config
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LINQ_judgeNumber\bin\Debug\LINQ_judgeNumber.exe
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LINQ_judgeNumber\bin\Debug\LINQ_judgeNumber.pdb
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LINQ_judgeNumber\obj\Debug\LINQ_judgeNumber.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LINQ_judgeNumber\obj\Debug\LINQ_judgeNumber.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LINQ_judgeNumber\obj\Debug\LINQ_judgeNumber.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LINQ_judgeNumber\obj\Debug\LINQ_judgeNumber.exe
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LINQ_judgeNumber\obj\Debug\LINQ_judgeNumber.pdb

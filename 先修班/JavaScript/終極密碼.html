@@ -25,7 +25,7 @@
                         <p class="range">0~100</p>
                     </div>
                     <div class="show_Input">
-                        <input type="number" class="input" placeholder="請輸入數字">
+                        <input type="number" class="input" placeholder="猜猜看數字是多少!?">
                         </input>
                     </div>
                 </div>
@@ -103,7 +103,7 @@
         // 檢查是否相等
         function Check_Number(sender) {
             while (number["randomNumber"] == sender) {
-                alert(`恭喜!猜對拉~~正確答案為${number["randomNumber"]}`);
+                alert(`恭喜!猜對拉~~正確答案為 ${number["randomNumber"]}`);
                 NewGame();
                 break;
             }
@@ -111,7 +111,7 @@
         // 防呆裝置
         function Foolproof_Mechanism() {
             if (inputNumber.value == null || parseInt(inputNumber.value) > number["range"]['maxNum'] || parseInt(inputNumber.value) < number["range"]["minNum"]) {
-                alert("請輸入範圍內數字");
+                alert("請輸入範圍內的數字");
                 inputNumber.value = "";
                 return true;
             }

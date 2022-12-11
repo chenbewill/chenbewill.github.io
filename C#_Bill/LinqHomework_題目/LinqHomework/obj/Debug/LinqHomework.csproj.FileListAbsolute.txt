@@ -6,3 +6,11 @@ C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\LinqHomework_題�
 C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\LinqHomework_題目\LinqHomework\obj\Debug\LinqHomework.csproj.CoreCompileInputs.cache
 C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\LinqHomework_題目\LinqHomework\obj\Debug\LinqHomework.exe
 C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\LinqHomework_題目\LinqHomework\obj\Debug\LinqHomework.pdb
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LinqHomework_題目\LinqHomework\bin\Debug\LinqHomework.exe.config
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LinqHomework_題目\LinqHomework\bin\Debug\LinqHomework.exe
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LinqHomework_題目\LinqHomework\bin\Debug\LinqHomework.pdb
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LinqHomework_題目\LinqHomework\obj\Debug\LinqHomework.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LinqHomework_題目\LinqHomework\obj\Debug\LinqHomework.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LinqHomework_題目\LinqHomework\obj\Debug\LinqHomework.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LinqHomework_題目\LinqHomework\obj\Debug\LinqHomework.exe
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LinqHomework_題目\LinqHomework\obj\Debug\LinqHomework.pdb

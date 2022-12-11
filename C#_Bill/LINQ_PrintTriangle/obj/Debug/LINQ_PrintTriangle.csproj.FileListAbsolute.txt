@@ -6,3 +6,11 @@ C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\LINQ_PrintTriangle
 C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\LINQ_PrintTriangle\obj\Debug\LINQ_PrintTriangle.csproj.CoreCompileInputs.cache
 C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\LINQ_PrintTriangle\obj\Debug\LINQ_PrintTriangle.exe
 C:\Users\chenb\source\repos\BuildSchool\C#正式課程\作業\LINQ_PrintTriangle\obj\Debug\LINQ_PrintTriangle.pdb
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LINQ_PrintTriangle\bin\Debug\LINQ_PrintTriangle.exe.config
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LINQ_PrintTriangle\bin\Debug\LINQ_PrintTriangle.exe
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LINQ_PrintTriangle\bin\Debug\LINQ_PrintTriangle.pdb
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LINQ_PrintTriangle\obj\Debug\LINQ_PrintTriangle.csproj.AssemblyReference.cache
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LINQ_PrintTriangle\obj\Debug\LINQ_PrintTriangle.csproj.SuggestedBindingRedirects.cache
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LINQ_PrintTriangle\obj\Debug\LINQ_PrintTriangle.csproj.CoreCompileInputs.cache
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LINQ_PrintTriangle\obj\Debug\LINQ_PrintTriangle.exe
+C:\Users\chenb\source\repos\BuildSchool\HomeWork\C#_Bill\LINQ_PrintTriangle\obj\Debug\LINQ_PrintTriangle.pdb
