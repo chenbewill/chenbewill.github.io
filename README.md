@@ -23,4 +23,8 @@ ans:transform
 耳包沒聽清楚題目  
 注意HTML語意===>那些才是重要資料  
 1.5樣特點 ， 2.改良了那些項目  
-[JavaScript](https://chenbewill.github.io/先修班/JavaScript/終極密碼.html)
+[JavaScript](https://chenbewill.github.io/先修班/JavaScript/終極密碼.html)  
+[RWD](https://chenbewill.github.io/HTML&CSS_Amons/Day5/RWD.html)
+各種鬼打牆  
+絕對定位後 寬度變成父層空間??  
+父層高度空間那裏來的?
