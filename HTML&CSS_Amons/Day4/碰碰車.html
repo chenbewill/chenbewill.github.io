@@ -12,16 +12,12 @@
 <body>
     <main>
         <div class="container">
-            <section class="section_Exp">
-                <div class="main_Banner">
-                    <img src="./imgSource/advantage-1-video-button-bg.png" alt="駕駛體驗">
-                    <a href="#"><img src="./imgSource/video-icon.png" alt=""></a>
-                </div>
+            <section class="section_Exp"><!--修正差異 -->
                 <div class="card">
-                    <div class="main_Article">
-                        <p>01</p>
-                        <p class="desc">操控樂趣</p>
-                        <div class="text">
+                    <div class="main_Article"><!--設定相對定位-->
+                        <span>01</span>
+                        <span class="desc">操控樂趣</span>
+                        <div class="text"> <!--設定絕對定位-->
                             <h2>人人滿意的駕駛體驗</h2>
                             <p> 透過最佳重量分配，實現平順起
                                 步、直線穩定加速，過彎同時保持
@@ -32,14 +28,19 @@
                     <div class="gray_Area">
                     </div>
                 </div>
-                <article class="change_Info">
-                    <p class="title">我們做了這些革新</p>
+                <div class="main_Banner">
+                    <img src="./imgSource/advantage-1-video-button-bg.png" alt="駕駛體驗">
+                    <a href="#"><!--margin負值-->
+                        <img src="./imgSource/video-icon.png" alt="">
+                    </a>
+                </div>
+                <div class="change_Info"> <!--不是文章-->
+                    <div class="title">我們做了這些革新</div><!--不重要標題-->
                     <ul class="change_List">
                         <li class="item">
                             <h3>低重心設計</h3>
                             <p>透過低重心設計·不僅呈現更低伏的外觀·更能减少車身側傾·保持高速行駛穩定性。</p>
                         </li>
-
                         <li class="item">
                             <h3>車體剛性強化</h3>
                             <p>車身結構採用超高強度鋼材·提高車輛穩定性·同時藉由雷射強化焊接技術·大幅增加
@@ -51,7 +52,7 @@
                                 靈敏度與清晰路感回饋，提升駕馭樂趣。</p>
                         </li>
                     </ul>
-                </article>
+                </div>
             </section>
             <section class="section_Exp">
                 <div class="main_Banner">

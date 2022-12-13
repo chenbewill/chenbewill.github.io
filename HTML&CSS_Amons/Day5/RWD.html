@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            --col-count: 1;
+            max-width: 1440px;
+            margin: auto;
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 10px;
+            padding: 10px;
+            background-color: rgba(36, 36, 139, 0.4);
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+
+        .item .item-Pic {
+            width: 50%;
+        }
+
+        .item .item-Pic img {
+            width: 100%;
+        }
+
+        .item .item-Text {
+            width: 50%;
+        }
+
+        .item .item-Text p {
+            margin: 10px;
+        }
+
+        .item-Text h2 {
+            text-align: center;
+        }
+
+        @media screen and (min-width:768px) {
+            .wrap .item {
+                --col-count: 3;
+                width: calc(100% / var(--col-count) - 42px);
+            }
+
+            .item .item-Pic {
+                width: 100%;
+            }
+
+            .item .item-Text {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width:1200px) {
+
+            .wrap .item {
+                position: relative;
+            }
+
+            .wrap .item:nth-child(-n+2) {
+                --col-count: 2;
+            }
+
+            .item:nth-child(-n+2) .item-Pic,
+            .item:nth-child(-n+2) .item-Text {
+                width: 50%;
+            }
+
+            .wrap .item:nth-child(n+3) {
+                --col-count: 4;
+                padding: 0;
+                width: calc(100% / var(--col-count) - 22px);
+            }
+
+            .wrap .item:nth-child(n+3) {
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            .wrap .item:nth-child(n+3) .item-Text {
+                position: absolute;
+                color: white;
+            }
+
+            .wrap .item:nth-child(n+3) .item-Pic {
+                z-index: 1;
+            }
+
+            .wrap .item:nth-child(n+3):hover .item-Pic {
+                opacity: 0.1;
+                transition: opacity 1s;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="item">
+            <div class="item-Pic">
+                <img src="https://picsum.photos/100/100/?random=1">
+            </div>
+            <div class="item-Text">
+                <h2 class="title">title</h2>
+                <p>
+                    小組頻道指標以及寫作體系標誌教師針對一副，在這裡小孩辛苦豐富，聽到觀念則是之一遇到花蓮選擇臺灣民眾隊伍收費不是打擊傳來上下，千萬桃園衛生法國物理當中風格，不肯蘋果關鍵數碼聲音危險無法理想寫真，一些促銷傳說不對警察國有我把進攻，每個人溫度點這裡，一旦本來同。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-Pic">
+                <img src="https://picsum.photos/100/100/?random=2">
+            </div>
+            <div class="item-Text">
+                <h2 class="title">title</h2>
+                <p>
+                    小組頻道指標以及寫作體系標誌教師針對一副，在這裡小孩辛苦豐富，聽到觀念則是之一遇到花蓮選擇臺灣民眾隊伍收費不是打擊傳來上下，千萬桃園衛生法國物理當中風格，不肯蘋果關鍵數碼聲音危險無法理想寫真，一些促銷傳說不對警察國有我把進攻，每個人溫度點這裡，一旦本來同。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-Pic">
+                <img src="https://picsum.photos/100/100/?random=3">
+            </div>
+            <div class="item-Text">
+                <h2 class="title">title</h2>
+                <p>
+                    小組頻道指標以及寫作體系標誌教師針對一副，在這裡小孩辛苦豐富，聽到觀念則是之一遇到花蓮選擇臺灣民眾隊伍收費不是打擊傳來上下，千萬桃園衛生法國物理當中風格，不肯蘋果關鍵數碼聲音危險無法理想寫真，一些促銷傳說不對警察國有我把進攻，每個人溫度點這裡，一旦本來同。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-Pic">
+                <img src="https://picsum.photos/100/100/?random=4">
+            </div>
+            <div class="item-Text">
+                <h2 class="title">title</h2>
+                <p>
+                    小組頻道指標以及寫作體系標誌教師針對一副，在這裡小孩辛苦豐富，聽到觀念則是之一遇到花蓮選擇臺灣民眾隊伍收費不是打擊傳來上下，千萬桃園衛生法國物理當中風格，不肯蘋果關鍵數碼聲音危險無法理想寫真，一些促銷傳說不對警察國有我把進攻，每個人溫度點這裡，一旦本來同。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-Pic">
+                <img src="https://picsum.photos/100/100/?random=5">
+            </div>
+            <div class="item-Text">
+                <h2 class="title">title</h2>
+                <p>
+                    小組頻道指標以及寫作體系標誌教師針對一副，在這裡小孩辛苦豐富，聽到觀念則是之一遇到花蓮選擇臺灣民眾隊伍收費不是打擊傳來上下，千萬桃園衛生法國物理當中風格，不肯蘋果關鍵數碼聲音危險無法理想寫真，一些促銷傳說不對警察國有我把進攻，每個人溫度點這裡，一旦本來同。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-Pic">
+                <img src="https://picsum.photos/100/100/?random=6">
+            </div>
+            <div class="item-Text">
+                <h2 class="title">title</h2>
+                <p>
+                    小組頻道指標以及寫作體系標誌教師針對一副，在這裡小孩辛苦豐富，聽到觀念則是之一遇到花蓮選擇臺灣民眾隊伍收費不是打擊傳來上下，千萬桃園衛生法國物理當中風格，不肯蘋果關鍵數碼聲音危險無法理想寫真，一些促銷傳說不對警察國有我把進攻，每個人溫度點這裡，一旦本來同。
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>
