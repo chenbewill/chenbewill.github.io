@@ -29,7 +29,7 @@
             margin: 10px;
             padding: 10px;
             background-color: rgba(36, 36, 139, 0.4);
-            border: 1px solid black;
+            /* border: 1px solid black; */
             border-radius: 10px;
         }
 
@@ -40,6 +40,8 @@
 
         .item .item-Pic img {
             width: 100%;
+            border-radius: 10px;
+            vertical-align: bottom;
         }
 
         .item .item-Text {
@@ -57,7 +59,7 @@
         @media screen and (min-width:768px) {
             .wrap .item {
                 --col-count: 3;
-                width: calc(100% / var(--col-count) - 42px);
+                width: calc(100% / var(--col-count) - 40px);
             }
 
             .item .item-Pic {
@@ -91,7 +93,10 @@
             }
 
             .wrap .item:nth-child(n+3) {
-                background-color: rgba(0, 0, 0, 0.4);
+                background-color: transparent;
+            }
+            .wrap .item:nth-child(n+3):hover{
+                background-color: rgba(0, 0, 0, 0.6);
             }
 
             .wrap .item:nth-child(n+3) .item-Text {
