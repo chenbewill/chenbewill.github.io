@@ -25,6 +25,6 @@ ans:transform
 1.5樣特點 ， 2.改良了那些項目  
 [JavaScript](https://chenbewill.github.io/先修班/JavaScript/終極密碼.html)  
 [RWD](https://chenbewill.github.io/HTML&CSS_Amons/Day5/RWD.html)
-各種鬼打牆
-絕對定位後寬度變成父層空間  
-圖片背景  
+各種鬼打牆  
+絕對定位後 寬度變成父層空間??  
+父層高度空間那裏來的?
