@@ -110,7 +110,7 @@
         }
         // 防呆裝置
         function Foolproof_Mechanism() {
-            if (inputNumber.value.length == 0 ||  putNumber.value == null || parseInt(inputNumber.value) > number["range"]['maxNum'] || parseInt(inputNumber.value) < number["range"]["minNum"]) {
+            if (inputNumber.value.length == 0 ||  inputNumber.value == null || parseInt(inputNumber.value) > number["range"]['maxNum'] || parseInt(inputNumber.value) < number["range"]["minNum"]) {
                 alert("請輸入範圍內的數字");
                 inputNumber.value = "";
                 return true;
