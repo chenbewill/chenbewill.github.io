@@ -69,7 +69,7 @@
             if (sender.value == "reset") {
                 inputNumber.value = "";
             } else {
-                inputNumber.value += parseInt(sender.innerText);
+                inputNumber.value += parseInt(sender.innerText, 10);
             }
         }
         // 重新開始
@@ -88,7 +88,7 @@
         }
         // 修改範圍
         function Change_Range(sender) {
-            sender - number["randomNumber"] >= 0 ? number["range"]['maxNum'] = parseInt(sender) : number["range"]["minNum"] = parseInt(sender);
+            sender - number["randomNumber"] >= 0 ? number["range"]['maxNum'] = parseInt(sender, 10) : number["range"]["minNum"] = parseInt(sender, 10);
             outputRange.innerText = `${number["range"]["minNum"]}~${number["range"]['maxNum']}`;
         }
         // 輸入
@@ -110,7 +110,7 @@
         }
         // 防呆裝置
         function Foolproof_Mechanism() {
-            if (inputNumber.value.length == 0 ||  inputNumber.value == null || parseInt(inputNumber.value) > number["range"]['maxNum'] || parseInt(inputNumber.value) < number["range"]["minNum"]) {
+            if (inputNumber.value.length == 0 || inputNumber.value == null || parseInt(inputNumber.value, 10) > number["range"]['maxNum'] || parseInt(inputNumber.value, 10) < number["range"]["minNum"]) {
                 alert("請輸入範圍內的數字");
                 inputNumber.value = "";
                 return true;
@@ -120,6 +120,11 @@
             }
         }
 
+        document.addEventListener("keyup", function (sender) {
+            if (sender.key == "Enter") {
+                Enter();
+            }
+        })
     </script>
     <!-- 無使用 -->
     <script src="./終極密碼.js"></script>
