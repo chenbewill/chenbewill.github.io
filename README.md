@@ -14,10 +14,8 @@ SVG 設定 不了解 >>蝦用..
 [JavaScript](https://chenbewill.github.io/先修班/JavaScript/終極密碼.html)  
 [RWD](https://chenbewill.github.io/HTML&CSS_Amons/Day5/RWD.html)
 
-[RWD選單]()
+[RWD選單](https://chenbewill.github.io/HTML&CSS_Amons/Day6/選單.html)
 漢堡的 旋轉動畫 時間順序，選轉角度   算很久...  
 切完再把CSS依照裝置分開  
-hover 不設定高度的話，移開選單會消失....
-
-選取器 用錯
-:
+hover 不設定高度的話，移開選單會消失....  
+選取器 :has用法不對
