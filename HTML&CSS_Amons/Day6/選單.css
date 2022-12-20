@@ -1,0 +1,232 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.main_header {
+    height: 60px;
+    width: 100%;
+    background-color: gray;
+}
+
+.container {
+    height: 100%;
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+.logo img {
+    width: 40px;
+}
+
+/* 共用 */
+
+.hamburger {
+    position: relative;
+}
+
+.hamburgerBTN {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* X動畫待修改 */
+.hamburgerBTN::before {
+    content: "";
+    width: 36px;
+    top: 9px;
+    left: 2px;
+    position: absolute;
+    height: 9px;
+    border-top: 2px solid white;
+    transition: transform 1s, border-bottom 2s;
+    border-bottom: 2px solid white;
+}
+
+.hamburgerBTN::after {
+    content: "";
+    width: 36px;
+    top: 31px;
+    left: 2px;
+    position: absolute;
+    transition: transform 1s;
+    border-bottom: 2px solid white;
+}
+
+[id*="Control"]{
+    display: none;
+}
+
+#hamburger_Control:checked+.main_header .link_List {
+    display: block;
+}
+
+#hamburger_Control:checked+.main_header .hamburgerBTN::before {
+    height: 0px;
+    top: 20px;
+    border-bottom: 2px solid transparent;
+    transform: rotate(-45deg);
+}
+
+#hamburger_Control:checked+.main_header .hamburgerBTN::after {
+    top: 20px;
+    transform: rotate(45deg);
+}
+
+.main_header .link_List {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+}
+
+.main_header .link_List>ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main_header .link_List .item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #fac;
+    border-bottom: 1px solid rgb(247, 0, 255);
+    position: relative;
+}
+.link_List .item .item_Link{
+    margin: 10px;
+}
+
+.link_List .item .child_List {
+    /* display: block; */
+    display: none;
+    background-color: #fa0;
+    text-align: center;
+    width: 100%;
+}
+
+.link_List .item .item_Child_Control {
+    margin-left: 10px;
+}
+.link_List .item .child_List .item_Child{
+    padding: 10px;
+    border-bottom: 1px solid rgb(223, 108, 6);
+}
+
+.link_List .item .item_Child_Control img{
+    width: 20px;
+    height: 20px;    
+    transform: rotate(90deg);
+}
+
+#item_Child_Control_A:checked~.child_List,
+#item_Child_Control_B:checked~.child_List,
+#item_Child_Control_C:checked~.child_List,
+#item_Child_Control_D:checked~.child_List,
+#item_Child_Control_E:checked~.child_List {
+    /* display: none; */
+    display: block;
+
+}
+#item_Child_Control_A:checked~.item_Child_Control img,
+#item_Child_Control_B:checked~.item_Child_Control img,
+#item_Child_Control_C:checked~.item_Child_Control img,
+#item_Child_Control_D:checked~.item_Child_Control img,
+#item_Child_Control_E:checked~.item_Child_Control img{
+    transform: rotate(270deg);
+}
+
+
+/* 平板直 >>吃手機板*/
+@media screen and (min-width:768px) {
+.main_header .link_List{
+    width: 50%;
+    left: -100%;
+    display: block;
+    transition:left 1s;
+}
+#hamburger_Control:checked+.main_header .link_List {
+    left: 0;
+}
+
+}
+
+/* 桌機 >>>吃平板橫向*/
+@media screen and (min-width:1024px) {
+
+    .hamburger,
+    .item_Child_Control {
+        display: none;
+    }
+
+    .main_header .link_List {
+        display: flex;
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: relative;
+    }
+
+    .main_header .link_List .item {
+        background-color: transparent;
+        width: fit-content;
+        border: none;
+    }
+
+    .link_List .item .item_Link {
+        height: 60px;
+        padding: 0 10px;
+        margin: 0;
+        width:100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .link_List .item .item_Link:hover{
+        background-color: rgb(70, 67, 67);
+    }
+    .link_List .item .item_Link a{
+        color: white;
+    }
+
+    .link_List .item .child_List {
+        position: absolute;
+        box-sizing: border-box;
+        top: 0;
+        left: 0px;
+    }
+    .link_List .item .child_List .item_Child{
+        border-bottom: 1px solid rgb(223, 108, 6);
+    }
+
+    .item:has(#item_Child_Control_A):hover .item_Link~.child_List,
+    .item:has(#item_Child_Control_B):hover .item_Link~.child_List,
+    .item:has(#item_Child_Control_C):hover .item_Link~.child_List,
+    .item:has(#item_Child_Control_D):hover .item_Link~.child_List,
+    .item:has(#item_Child_Control_E):hover .item_Link~.child_List {
+        display: block;
+        top: 100%;
+    }
+}
