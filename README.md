@@ -23,3 +23,4 @@ hover 不設定高度的話，移開選單會消失....
 F12 切換裝置會壞掉  
 
 [英雄聯盟卡片](https://chenbewill.github.io/JavaScript_%E6%B1%9F/Day%202/LOL_CardStatic.html)
+[360Altis](https://chenbewill.github.io/JavaScript_%E6%B1%9F/Day%202/360Altis.html)
