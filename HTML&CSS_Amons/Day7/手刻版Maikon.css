@@ -1,0 +1,42 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 300;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+[id*=_Control] {
+    display: none;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.link_list{
+    margin-left: auto;
+}
+.link_list  ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.link_list .item{
+    padding: 0 10px;
+}
+.link_list .item a{
+    color: gray;
+
+}
+
+@media screen (min-weight:768px) {}
+
+@media screen (min-weight:1024px) {}
+
+@media screen (min-weight:1200px) {}
