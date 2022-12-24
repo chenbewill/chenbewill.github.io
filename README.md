@@ -21,3 +21,5 @@ hover 不設定高度的話，移開選單會消失....
 結構設計有問題，class命名亂七八糟,後面調整結構花很多時間
 選取器 :has用法不對  
 F12 切換裝置會壞掉  
+
+[英雄聯盟卡片](https://chenbewill.github.io/JavaScript_%E6%B1%9F/Day%202/LOL_CardStatic.html)
