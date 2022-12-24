@@ -69,6 +69,7 @@ img {
     /* transition: transform 1s ; */
     border-bottom: 2px solid white;
 }
+
 #hamburger_Control:checked+.main_header .hamburgerBTN::before {
     height: 0px;
     top: 20px;
@@ -161,15 +162,18 @@ img {
     height: 20px;
     transform: rotate(0deg);
 }
+
 .child_List .item_Child .list .item {
     padding: 10px 0;
     background-color: rgb(0, 221, 255);
-    border-bottom:1px solid rgb(12, 103, 223);
+    border-bottom: 1px solid rgb(12, 103, 223);
 }
+
 #item_Child_Control_A_A:checked~.list,
 [id*="item_Child_Control_"]:checked~.child_List {
     display: block;
 }
+
 #item_Child_Control_A_A:checked~.control img,
 [id*="item_Child_Control_"]:checked~.item_Child_Control img {
     transform: rotate(90deg);
@@ -195,7 +199,7 @@ img {
 @media screen and (min-width:1024px) {
 
     .hamburger,
-    .item_Child_Control{
+    .item_Child_Control {
         display: none;
     }
 
@@ -238,22 +242,22 @@ img {
         top: 0;
         left: 0px;
     }
+
     .child_List .item_Child .list {
-        
+
         top: 0;
         left: 100%;
         position: absolute;
         margin: 0;
     }
-    .child_List .item_Child .list .item{
+
+    .child_List .item_Child .list .item {
         width: 100%;
         padding: 10px 0;
     }
-    
 
 
-
-    .item:has([id*="item_Child_Control_"]):hover .item_Link~.child_List{
+    .item:has([id*="item_Child_Control_"]):hover .item_Link~.child_List {
         display: block;
         top: 100%;
     }
@@ -267,3 +271,5 @@ img {
         top: 100%;
     } */
 }
+
+@media screen and (min-width:1200px) {}

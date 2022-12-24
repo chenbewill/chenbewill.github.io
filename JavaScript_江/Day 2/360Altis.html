@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1440px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: auto;
+        }
+
+        .main_pic {
+            height: 400px;
+            width: 1180px;
+            position: relative;
+        }
+
+        .main_pic .cars.show {
+            display: block;
+        }
+
+        .cars {
+            position: absolute;
+            display: none;
+            top: 0;
+            left: 0;
+        }
+
+        .main_text {
+            text-align: center;
+        }
+
+        .color {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .main_text .color .title {
+            width: 100%;
+        }
+
+        .btn {
+            display: block;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            margin: 10px;
+            box-shadow: 0 1px 8px rgb(0 0 0 / 35%);
+            box-sizing: border-box;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+
+        }
+
+        .btn:hover {
+            border: 2px solid black;
+        }
+
+        .blue {
+            background-image: linear-gradient(135deg, rgb(164, 194, 224), rgb(45, 67, 88));
+        }
+
+        .black {
+            background-image: linear-gradient(135deg, rgb(144, 145, 146), rgb(7, 8, 10));
+        }
+
+        .gray {
+            background-image: linear-gradient(135deg, rgb(193, 195, 196), rgb(75, 77, 80));
+        }
+
+        .red {
+            background-image: linear-gradient(135deg, rgb(239, 109, 97), rgb(123, 31, 30));
+        }
+
+        .white {
+            background-image: linear-gradient(135deg, rgb(255, 255, 255), rgb(213, 214, 214));
+        }
+
+        .silver {
+            background-image: linear-gradient(135deg, rgb(231, 231, 232), rgb(165, 167, 178));
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section_360degPic">
+
+        <div class="container">
+            <span class="control_btn backward">
+                <button>
+                    &lt&lt&lt&lt&lt
+                </button>
+            </span>
+            <div class="main_pic">
+                <!-- <img src="./imgSource/360EXT_1_18_1.png" alt="" > -->
+            </div>
+            <span class="control_btn forward">
+                <button>
+                    &gt&gt&gt&gt&gt
+                </button>
+            </span>
+            <div class="main_text">
+                <div class="color">
+                    <h3 class="title" data-car-color="藍曜灰">藍曜灰</h3>
+                    <span class="btn blue" data-color="藍曜灰"></span>
+                    <span class="btn black" data-color="檀木黑"></span>
+                    <span class="btn gray" data-color="雲河灰"></span>
+                    <span class="btn red" data-color="炫魅紅"></span>
+                    <span class="btn white" data-color="雪貂白"></span>
+                    <span class="btn silver" data-color="極光銀"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        //資料物件
+        let carData = {
+            type: "Altis",
+            colors: ["藍曜灰", "檀木黑", "雲河灰", "炫魅紅", "雪貂白", "極光銀"],
+            imgs: [],
+        }
+        //物件建立圖片
+        function GetCartPic(color) {
+            //先1種
+            for (let ctype = 0; ctype < 1; ctype++) {
+                //先2張..
+                for (let i = 1; i <= 60; i++) {
+                    let picSource = `./imgSource/360EXT_1_${color}_${i}.png`;
+                    carData.imgs.push(picSource);
+                }
+                color += 1;
+            }
+        }
+        GetCartPic(18);//資料顏色代號為數字
+        window.onload = function () {
+            const mainPic = document.querySelector(".main_pic");
+            //產生DOMimg
+            CreatDOMimg();
+            function CreatDOMimg() {
+
+                let index = 1;
+                for (let i = 0; i < carData.imgs.length; i++) {
+                    let img = document.createElement("img");
+                    img.setAttribute("src", `${carData.imgs[i]}`);
+                    img.setAttribute("index", index);
+                    index += 1;
+                    while (index > 60) {
+                        index = 1;
+                    }
+                    while (i == 1) {
+                        img.classList.add("show");
+                        break;
+                    }
+                    img.classList.add("cars");
+                    mainPic.appendChild(img);
+                }
+            }
+            //點擊轉向事件  (滑鼠長按不放?)
+            mousedown();
+            function mousedown() {
+                document.querySelectorAll(".control_btn").forEach(el => {
+                    el.addEventListener("mousedown", function changeImage() {
+                        let currentPic = mainPic.querySelector(".show");
+                        let index = parseInt(currentPic.getAttribute("index"));
+                        let nextPic;
+                        let backPic;
+                        if (index == 60) {
+                            nextPic = mainPic.querySelector(`[index="1"]`);
+                            backPic = mainPic.querySelector(`[index="${index - 1}"]`);
+                        } else if (index == 1) {
+                            nextPic = mainPic.querySelector(`[index="${index + 1}"]`);
+                            backPic = mainPic.querySelector(`[index="60"]`);
+                        }
+                        else {
+                            nextPic = mainPic.querySelector(`[index="${index + 1}"]`);
+                            backPic = mainPic.querySelector(`[index="${index - 1}"]`);
+                        }
+
+                        if (this.className.includes("backward")) {
+                            backPic.classList.add("show");
+                        } else {
+                            nextPic.classList.add("show");
+                        }
+                        currentPic.classList.remove("show");
+                    });
+                })
+            }
+            //更換title
+            changetitle()
+            function changetitle() {
+                document.querySelectorAll(".btn").forEach(el => {
+                    el.addEventListener("click", function changeCarColor() {
+                        const color = this.getAttribute("data-color");
+                        const title = document.querySelector(".title");
+                        title.innerText = color;
+                        title.setAttribute("data-car-color", color);
+                    });
+                });
+            }
+            //拖曳轉向事件??
+
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
