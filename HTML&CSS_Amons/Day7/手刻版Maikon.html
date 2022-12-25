@@ -8,6 +8,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="./script/normalize.css">
     <link rel="stylesheet" href="./手刻版Maikon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -16,12 +19,15 @@
             <div class="wrap">
                 <input type="checkbox" id="HB_Control">
                 <div class="logo">
-                    <img src="./imageSource/logo.webp">
+                    <h1>Maikon
+                        <img src="./imageSource/logo.webp" alt="logo">
+                    </h1>
                 </div>
                 <nav class="link_list">
-                    <ul >
+                    <ul>
+                        <label class="controlBtn" for="HB_Control">X</label>
                         <li class="item">
-                            <a href="#">Home</a>
+                            <a class="currentPage" href="#">Home</a>
                         </li>
                         <li class="item">
                             <a href="#">About</a>
@@ -39,24 +45,465 @@
                             <a href="#">Contacts</a>
                         </li>
                     </ul>
-                </nav>
-                <div class="HB">
-                    <label for="#HB_Control"></label>
+                </nav> 
+                <div class="subcribeBTN abtn">
+                    <a href="#">Subscribe</a>
                 </div>
-                <div class="subcribeBTN">
-                    <a href="">Subscribe</a>
+                <div class="HB">
+                    <label class="controlBtn" for="HB_Control">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
                 </div>
             </div>
 
         </div>
     </header>
     <main>
-        <section>
+        <div class="container">
+            <!-- 團隊座右銘? -->
+            <section class="section_motto">
+                <div class="wrap">
+                    <div class="text">
+                        <h2>Our creativity is your success</h2>
+                        <p>We break all boundaries if they happen on our way of project’s development!</p>
+                        <div class="info">
+                            <div class="moreInfo bbtn">
+                                <a href="#">LEARN MORE</a>
+                            </div>
+                            <div class="video">
+                                <a href="#">
+                                    <img src="./imageSource/play-button.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="./imageSource/home-image-1.svg">
+                    </div>
+                </div>
+                <div class="wrap">
+                    <div class="text">
+                        <h2>Creative challenges are our passion</h2>
+                        <p>Our team of designers and developers work closely together to build a creative and positive
+                            working environment. Functionality is as important to us as aesthetics.</p>
+                        <div class="info">
+                            <div class="moreInfo ">
+                                <a class="" href="#">ABOUT US</a>
+                            </div>
+                            <div class="submit abtn">
+                                <a href="#">
+                                   <span>CONTACT US</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="./imageSource/home-image-2.webp">
+                    </div>
+                </div>
+            </section>
+            <!-- 提供服務 -->
+            <section class="section_service">
+                <div class="wrap">
+                    <div class="text">
+                        <h2>We provide a wide range of creative services</h2>
+                        <div class="item_list">
+                            <ul>
+                                <li class="item">
+                                    <div class="pic">
+                                        <img src="./imageSource/icon-1.svg">
+                                    </div>
+                                    <div class="text">
+                                        <h3>Web Design & Brending</h3>
+                                        <p>A great brand combines design and conveys company’s value messaging to evoke
+                                            emotion and drive strategy.</p>
+                                        <div class="moreInfo">
+                                            <a href="#">
+                                                READ MORE
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pic">
+                                        <img src="./imageSource/icon-2.svg">
+                                    </div>
+                                    <div class="text">
+                                        <h3>Web Design & Brending</h3>
+                                        <p>A great brand combines design and conveys company’s value messaging to evoke
+                                            emotion and drive strategy.</p>
+                                        <div class="moreInfo">
+                                            <a href="#">
+                                                READ MORE
+                                            </a>
+                                        </div>
 
-        </section>
+                                    </div>
+
+                                </li>
+                                <li class="item">
+                                    <div class="pic">
+                                        <img src="./imageSource/icon-3.svg">
+                                    </div>
+                                    <div class="text">
+                                        <h3>Video Production</h3>
+                                        <p>Creating and handling professional video is our strong point. It plays major
+                                            role in your digital business strategy.</p>
+                                        <div class="moreInfo">
+                                            <a href="#">
+                                                READ MORE
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pic">
+                                        <img src="./imageSource/icon-4.svg">
+                                    </div>
+                                    <div class="text">
+                                        <h3>SEO</h3>
+                                        <p>We provide everything your site needs to perform at it’s highest capabilities
+                                            on the major search engines.</p>
+                                        <div class="moreInfo">
+                                            <a href="#">
+                                                READ MORE
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pic">
+                                        <img src="./imageSource/icon-5.svg">
+                                    </div>
+                                    <div class="text">
+                                        <h3>Digital Marketing</h3>
+                                        <p>We do collateral design, interactive design, hoarding, signage, presentation
+                                            centres, and more</p>
+                                        <div class="moreInfo">
+                                            <a href="#">
+                                                READ MORE
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pic">
+                                        <img src="./imageSource/icon-6.svg">
+                                    </div>
+                                    <div class="text">
+                                        <h3>Infographics</h3>
+                                        <p>Turn your data into captivating artwork that will keep your audience engaged.
+                                            Our team can help you with it.</p>
+                                        <div class="moreInfo">
+                                            <a href="#">
+                                                READ MORE
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 聯繫我們 -->
+            <section class="section_contactUs">
+                <div class="wrap">
+                    <div class="text">
+                        <h2>If you have any questions, please contact us</h2>
+                        <p>Our professional support team try to do their best to provide you with high-quality
+                            consultations concerning any question about our services.</p>
+                        <div class="info">
+                            <div class="moreInfo">
+                                <a href="#">CONTACT US</a>
+                            </div>
+                            <div class="video">
+                                <a href="#">SUBSCRIBE
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="./imageSource/home-image-3.svg">
+                    </div>
+                </div>
+            </section>
+            <!-- 團隊優點 -->
+            <section class="section_advantage">
+                <div class="wrap">
+                    <div class="item_list">
+                        <ul>
+                            <li class="item">
+                                <div class="text">
+                                    <span>1800+</span>
+                                    <p>Completed projects to the end by our specialists.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="text">
+                                    <span>56</span>
+                                    <p>A large team of the best specialists.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="text">
+                                    <span>2000+</span>
+                                    <p>Customers who were satisfied with our work.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="text">
+                                    <span>100%</span>
+                                    <p>Customers who were satisfied with our work.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text">
+                        <h2>Why choose our studio for your projects?</h2>
+                        <p>We are a command of professional and enthusiastic people, who like what they do and are
+                            always in the process of growing and improving their skills.
+                        </p>
+                        <div class="moreInfo">
+                            <a href="#">ORDER SERVICE</a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!-- 工作流程 -->
+            <section class="section_workSOP">
+                <div class="wrap">
+                    <h2>Steps of our work</h2>
+                    <div class="step">
+                        <div class="text">
+                            <div class="pic">
+                                <img src="./imageSource/number-01.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Meeting With The Customer</h3>
+                                <p>The first meeting is very import to form contact and discuss the main ideas of the
+                                    project.</p>
+                            </div>
+                        </div>
+                        <div class="pic">
+                            <img src="./imageSource/home-image-4.svg">
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="text">
+                            <div class="pic">
+                                <img src="./imageSource/number-02.svg">
+                            </div>
+                            <div class="info">
+                                <h3>We Consider And Analyze The Work Plan</h3>
+                                <p>When we understand the main eideas, we proceed to discussing the work plan and
+                                    analyzing it.</p>
+                            </div>
+                        </div>
+                        <div class="pic">
+                            <img src="./imageSource/home-image-5.svg">
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="text">
+                            <div class="pic">
+                                <img src="./imageSource/number-03.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Work Hard On The Project</h3>
+                                <p>Our professional team start to handle with your project and embody the conception of
+                                    the project.</p>
+                            </div>
+                        </div>
+                        <div class="pic">
+                            <img src="./imageSource/home-image-6.svg">
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="text">
+                            <div class="pic">
+                                <img src="./imageSource/number-04.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Once Again We Analyze And Check Everything</h3>
+                                <p>We meet, analyze and check the done work and make needed corrections.</p>
+                            </div>
+                        </div>
+                        <div class="pic">
+                            <img src="./imageSource/home-image-7.svg">
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="text">
+                            <div class="pic">
+                                <img src="./imageSource/number-05.svg">
+                            </div>
+                            <div class="info">
+                                <h3>We Finish The Work And Give It To The Customer</h3>
+                                <p>The project is ready and we give it to the customer. Also we ask for the feedback
+                                    from the customer.</p>
+                            </div>
+                        </div>
+                        <div class="pic">
+                            <img src="./imageSource/home-image-8.svg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 成功案例 -->
+            <section class="section_cases">
+                <div class="wrap">
+                    <div class="title">
+                        <h2>Our team's work with Projects</h2>
+                       
+                            <a href="#">ALL PROJECTS</a>            
+                    </div>
+                    <div class="item_list">
+                        <ul>
+                            <li class="item">
+                                <div class="pic">
+                                    <img src="./imageSource/project-1.webp">
+                                </div>
+                                <div class="text">
+                                    <p>
+                                        Minimal Creative "Impuls"
+                                    </p>
+                                    <div>
+                                        <a href="#">WEB SITE</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="pic">
+                                    <img src="./imageSource/project-2.jpg">
+                                </div>
+                                <div class="text">
+                                    <p>
+                                        Minimal Creative "Impuls"
+                                    </p>
+                                    <div>
+                                        <a href="#">WEB SITE</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="pic">
+                                    <img src="./imageSource/project-3.webp">
+                                </div>
+                                <div class="text">
+                                    <p>
+                                        Minimal Creative "Impuls"
+                                    </p>
+                                    <div>
+                                        <a href="#">WEB SITE</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+            <!-- 註冊區塊 -->
+            <div class="section_sighup">
+                <div class="wrap">
+                    <div class="pic">
+                        <img src="./imageSource/home-image-9.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="card">
+                            <form class="form" action="">
+                                <span>Sign up for our consultation</span>
+                                <input type="text" placeholder="Name">
+                                <input type="email" placeholder="Email">
+                                <textarea name="" id="" cols="40" rows="10" placeholder="Message">
+                                    </textarea>
+                                <button type="submit">SEND</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 訂閱訊息 -->
+            <div class="section_subscrip">
+                <div class="wrap">
+                    <div class="title">
+                        Subscribe to our news and learn more
+                    </div>
+                    <div class="text">
+                        <input type="email"placeholder="Your Email">
+                        <div>SUBSCRIPTBE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-
     <footer>
+        <div class="container">
+            <div class="wrap">
+                <div class="item_list">
+                    <div class="item">
+                        <ul>
+                            <div class="title">
+                                <img src="./imageSource/logo.webp" alt="">
+                            </div>
+                            <li><span>phone:</span> + 1 (045) - 224 - 12 - 67</li>
+                            <li><span>Mail:</span>info@demolink.org</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <ul>
+                            <div class="title">Services</div>
+                            <li>Web design & brending</li>
+                            <li>Web development</li>
+                            <li>Full Optimization</li>
+                            <li>Research & Strategy</li>
+                            <li>Management & Marketing</li>
+                            <li>Free support</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <ul>
+                            <div class="title">About Company</div>
+                            <li>About us</li>
+                            <li>Team</li>
+                            <li>Case studio</li>
+                            <li>Contacts</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <ul>
+                            <div class="title">Our Social Networks</div>
+                            <li>Join us in the social networks and keep up on the latest news.</li>
+                        </ul>
+                        <div class="social">
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="text">
+                        Copyright © 2018 Wordpress Maikon. All Rights Reserved. | Theme design by <span>Zemez</span>
+                    </div>
+                    <div class="privacy">
+                        <div><a href="#">Privacy&Poilicy</a> </div>
+                        <div><a href="#">FAQ</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
     </footer>
 </body>
