@@ -398,6 +398,9 @@ section[class*="section_advantage"] {
     box-shadow: none;
 
 }
+.section_cases .item_list{
+    width: 100%;
+}
 
 .section_cases .item_list ul {
     display: flex;
@@ -665,6 +668,7 @@ footer .copyright .privacy a:hover{
     .section_service .item_list ul {
         display: flex;
         flex-flow: row wrap;
+        justify-content: center;
     }
 
     .section_service .item_list .item {
