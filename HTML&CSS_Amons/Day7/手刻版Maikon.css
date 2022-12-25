@@ -411,6 +411,10 @@ section[class*="section_advantage"] {
 .section_sighup .text .card textarea {
     width: 100%;
 }
+.section_sighup .text .card textarea{
+    min-width: 100%;
+    max-width: 100%;
+}
 
 .section_sighup .text .card button {
     background-color: #1fde82;
