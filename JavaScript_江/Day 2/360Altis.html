@@ -104,7 +104,7 @@
                 </button>
             </span>
             <div class="main_pic">
-                <!-- <img src="./imgSource/360EXT_1_18_1.png" alt="" > -->
+                <!-- <img src="./imgSource/360EXT_1_18_1.png" data-color="藍曜灰" index="1"  > -->
             </div>
             <span class="control_btn forward">
                 <button>
@@ -114,12 +114,12 @@
             <div class="main_text">
                 <div class="color">
                     <h3 class="title" data-car-color="藍曜灰">藍曜灰</h3>
-                    <span class="btn blue" data-color="藍曜灰"></span>
-                    <span class="btn black" data-color="檀木黑"></span>
-                    <span class="btn gray" data-color="雲河灰"></span>
-                    <span class="btn red" data-color="炫魅紅"></span>
-                    <span class="btn white" data-color="雪貂白"></span>
-                    <span class="btn silver" data-color="極光銀"></span>
+                    <span class="btn blue" data-car-color="藍曜灰"></span>
+                    <span class="btn black" data-car-color="檀木黑"></span>
+                    <span class="btn gray" data-car-color="雲河灰"></span>
+                    <span class="btn red" data-car-color="炫魅紅"></span>
+                    <span class="btn white" data-car-color="雪貂白"></span>
+                    <span class="btn silver" data-car-color="極光銀"></span>
                 </div>
 
             </div>
@@ -132,13 +132,13 @@
         //資料物件
         let carData = {
             type: "Altis",
-            colors: ["藍曜灰", "檀木黑", "雲河灰", "炫魅紅", "雪貂白", "極光銀"],
+            colors: ["藍曜灰", "檀木黑", "雲河灰", "極光銀", "炫魅紅", "雪貂白"],
             imgs: [],
         }
         //物件建立圖片
         function GetCartPic(color) {
             //先1種
-            for (let ctype = 0; ctype < 1; ctype++) {
+            for (let ctype = 0; ctype < 6; ctype++) {
                 //先2張..
                 for (let i = 1; i <= 60; i++) {
                     let picSource = `./imgSource/360EXT_1_${color}_${i}.png`;
@@ -153,17 +153,19 @@
             //產生DOMimg
             CreatDOMimg();
             function CreatDOMimg() {
-
                 let index = 1;
+                let colorindex = 0;
                 for (let i = 0; i < carData.imgs.length; i++) {
                     let img = document.createElement("img");
                     img.setAttribute("src", `${carData.imgs[i]}`);
-                    img.setAttribute("index", index);
+                    img.setAttribute("data-index", index);
+                    img.setAttribute("data-car-color", `${carData.colors[colorindex]}`);
                     index += 1;
                     while (index > 60) {
                         index = 1;
+                        colorindex += 1;
                     }
-                    while (i == 1) {
+                    while (i == 0) {
                         img.classList.add("show");
                         break;
                     }
@@ -171,48 +173,69 @@
                     mainPic.appendChild(img);
                 }
             }
-            //點擊轉向事件  (滑鼠長按不放?)
-            mousedown();
-            function mousedown() {
-                document.querySelectorAll(".control_btn").forEach(el => {
-                    el.addEventListener("mousedown", function changeImage() {
-                        let currentPic = mainPic.querySelector(".show");
-                        let index = parseInt(currentPic.getAttribute("index"));
-                        let nextPic;
-                        let backPic;
-                        if (index == 60) {
-                            nextPic = mainPic.querySelector(`[index="1"]`);
-                            backPic = mainPic.querySelector(`[index="${index - 1}"]`);
-                        } else if (index == 1) {
-                            nextPic = mainPic.querySelector(`[index="${index + 1}"]`);
-                            backPic = mainPic.querySelector(`[index="60"]`);
-                        }
-                        else {
-                            nextPic = mainPic.querySelector(`[index="${index + 1}"]`);
-                            backPic = mainPic.querySelector(`[index="${index - 1}"]`);
-                        }
+            //點擊轉向事件  (滑鼠長按不放?1.計時器)
 
-                        if (this.className.includes("backward")) {
-                            backPic.classList.add("show");
-                        } else {
-                            nextPic.classList.add("show");
-                        }
-                        currentPic.classList.remove("show");
-                    });
-                })
+            document.querySelectorAll(".control_btn").forEach(el => {
+                el.addEventListener("mousedown", changeImage);
+            })
+            // 轉向fn
+            function changeImage() {
+                //當前圖片
+                const currentPic = mainPic.querySelector(".show");
+                // 當前顏色
+                let color = mainPic.getAttribute("data-car-color");
+                //當前index
+                let index = parseInt(currentPic.getAttribute("data-index"));
+                //當前顏色的圖片NodeList
+                const tgPics = mainPic.querySelectorAll(`data-car-color="${color}"`);
+                let nextPic;
+                let backPic;
+
+                
+                if (index == 60) {
+                    nextPic = mainPic.querySelector(`[data-index="1"]`);
+                    backPic = mainPic.querySelector(`[data-index="${index - 1}"]`);
+                } else if (index == 1) {
+                    nextPic = mainPic.querySelector(`[data-index="${index + 1}"]`);
+                    backPic = mainPic.querySelector(`[data-index="60"]`);
+                }
+                else {
+                    nextPic = mainPic.querySelector(`[data-index="${index + 1}"]`);
+                    backPic = mainPic.querySelector(`[data-index="${index - 1}"]`);
+                }
+
+                if (this.className.includes("backward")) {
+                    backPic.classList.add("show");
+                } else {
+                    nextPic.classList.add("show");
+                }
+                currentPic.classList.remove("show");
             }
-            //更換title
-            changetitle()
-            function changetitle() {
-                document.querySelectorAll(".btn").forEach(el => {
-                    el.addEventListener("click", function changeCarColor() {
-                        const color = this.getAttribute("data-color");
-                        const title = document.querySelector(".title");
-                        title.innerText = color;
-                        title.setAttribute("data-car-color", color);
-                    });
-                });
+
+            //換色BTN
+            document.querySelectorAll(".btn").forEach(el => {
+                el.addEventListener("click", changeTitle);
+            });
+            //更換titlefn
+            function changeTitle() {
+                let color = this.getAttribute("data-car-color");
+                let title = document.querySelector(".title");
+                title.innerText = color;
+                title.setAttribute("data-car-color", color);
+                // 會重複的原因?
+                changeCarColor(color);
             }
+            //換色fn
+            function changeCarColor(color) {
+                // let color = document.querySelector(".title").innerText;
+                let currentPic = mainPic.querySelector(".show");
+                let targetPage = mainPic.querySelector(`[data-car-color="${color}"]`);
+                currentPic.classList.remove("show");
+                targetPage.classList.add("show");
+
+            };
+
+
             //拖曳轉向事件??
 
 

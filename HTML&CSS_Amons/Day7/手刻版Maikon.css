@@ -28,6 +28,7 @@ header {
     width: 100%;
     box-shadow: 0px 8px 32px 0px rgb(93 102 120 / 6%);
     background-color: white;
+    z-index: 2;
 }
 
 .container {
@@ -412,16 +413,45 @@ section[class*="section_advantage"] {
     box-sizing: border-box;
     width: 100%;
     margin-bottom: 2em;
+    position: relative;
+    display: flex;
 }
 
 .section_cases .item_list .pic {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 8px 32px 0 rgba(17 29 48 / 6%);
+    z-index: 0;
+    position: relative;
+
 }
 
 .section_cases .item_list .text {
-    display: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    padding: 0  20px;   
+    transition: opacity .4s ease;
+    border-radius: 10px;
+    background-color: rgba(31,222,130,0.98);
+    
+}
+.section_cases .item_list .text:hover{
+    opacity: 1;
+}
+
+.section_cases .item_list .text p{
+    color: white;
+    width: 100%;
+}
+.section_cases .item_list .text a{
+    display: flex;
 }
 
 /* section_sighup */
@@ -770,6 +800,9 @@ footer .copyright .privacy a:hover{
     .section_sighup .text {
         width: 50%;
 
+    }
+    .section_sighup .wrap{
+        align-items: flex-start;
     }
     /* .section_subscrip */
     .section_subscrip .text{
