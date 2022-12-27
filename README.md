@@ -24,4 +24,5 @@ F12 切換裝置會壞掉
 
 [英雄聯盟卡片](https://chenbewill.github.io/JavaScript_%E6%B1%9F/Day%202/LOL_CardStatic.html)  
 [360Altis](https://chenbewill.github.io/JavaScript_%E6%B1%9F/Day%202/360Altis.html)   
-[手刻版Maikon.html](https://chenbewill.github.io/HTML&CSS_Amons/Day7/手刻版Maikon.html)
+[手刻版Maikon.html](https://chenbewill.github.io/HTML&CSS_Amons/Day7/手刻版Maikon.html)  
+[Boostrap_Whoscall](https://chenbewill.github.io/HTML&CSS_Amons/Day7/Boostrap版whoscall)
