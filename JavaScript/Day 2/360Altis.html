@@ -211,7 +211,7 @@
 
             //委派換色btn事件
             document.querySelectorAll(".btn").forEach(el => {
-                el.addEventListener("click", changeTitle);
+                el.addEventListener("mousedown", changeTitle);
             });
             //更換titlefn
             function changeTitle() {
@@ -231,8 +231,8 @@
                 currentPic.classList.remove("show");
                 targetPage.classList.add("show");
             };
-
-            //持續選轉事件??
+            //持續選轉事件
+            
             //拖曳轉向事件??
 
 
