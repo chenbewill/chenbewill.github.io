@@ -11,7 +11,7 @@ SVG 設定 不了解 >>蝦用..
 
 [toyota五大優勢](https://chenbewill.github.io/HTML&CSS/Day4/%E7%A2%B0%E7%A2%B0%E8%BB%8A.html)
 
-[JavaScript](https://chenbewill.github.io/先修班/JavaScript/終極密碼.html)  
+[JavaScript](https://chenbewill.github.io/%E5%8A%A9%E6%95%99%E8%AA%B2/JavaScript/Day1/%E7%B5%82%E6%A5%B5%E5%AF%86%E7%A2%BC.html)  
 [RWD 畫面](https://chenbewill.github.io/HTML&CSS/Day5/RWD.html)
 
 [RWD選單](https://chenbewill.github.io/HTML&CSS/Day6/選單.html)
