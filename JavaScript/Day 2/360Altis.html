@@ -150,6 +150,7 @@
         GetCartPic(18);//資料顏色代號為數字
         window.onload = function () {
             const mainPic = document.querySelector(".main_pic");
+            let timeinter;
             //產生DOMimg
             CreatDOMimg();
             function CreatDOMimg() {
@@ -176,10 +177,11 @@
             //點擊轉向事件  (滑鼠長按不放?1.計時器)
 
             document.querySelectorAll(".control_btn").forEach(el => {
-                el.addEventListener("mousedown", changeImage);
+                el.addEventListener("mousedown", keepeven);
+                el.addEventListener("mouseup", stopKeep)
             })
             // 轉向fn
-            function changeImage() {
+            function changeImage(sender) {
                 //當前顯示的圖片
                 const currentPic = mainPic.querySelector(".show");
                 // 當前顏色
@@ -189,19 +191,19 @@
                 //當前顏色的圖片NodeList
                 const tgPics = mainPic.querySelectorAll(`[data-car-color="${color}"]`);
                 let nextPic;
-                let backPic;         
+                let backPic;
                 if (index == 59) {
                     nextPic = tgPics[0];
-                    backPic = tgPics[index-1];
+                    backPic = tgPics[index - 1];
                 } else if (index == 0) {
-                    nextPic = tgPics[index+1];
+                    nextPic = tgPics[index + 1];
                     backPic = tgPics[59];
                 }
                 else {
-                    nextPic =tgPics[index+1];
-                    backPic = tgPics[index-1]
+                    nextPic = tgPics[index + 1];
+                    backPic = tgPics[index - 1]
                 }
-                if (this.className.includes("backward")) {
+                if (sender.className.includes("backward")) {
                     backPic.classList.add("show");
                 } else {
                     nextPic.classList.add("show");
@@ -224,15 +226,24 @@
             //換色fn
             function changeCarColor(color) {
                 // let color = document.querySelector(".title").innerText;
-                let currentPic = mainPic.querySelector(".show");             
-                let index =currentPic.getAttribute("data-index");
-                let tgPics=mainPic.querySelectorAll(`[data-car-color="${color}"]`);
+                let currentPic = mainPic.querySelector(".show");
+                let index = currentPic.getAttribute("data-index");
+                let tgPics = mainPic.querySelectorAll(`[data-car-color="${color}"]`);
                 let targetPage = tgPics[index];
                 currentPic.classList.remove("show");
                 targetPage.classList.add("show");
             };
             //持續選轉事件
-            
+            function keepeven() {
+                timeinter = setInterval((el) => {
+                    changeImage(this);
+                }, 100);
+
+            }
+            function stopKeep() {
+                clearInterval(timeinter);
+
+            }
             //拖曳轉向事件??
 
 
