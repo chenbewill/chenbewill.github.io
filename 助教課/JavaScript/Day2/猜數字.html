@@ -173,6 +173,10 @@
           }
         })
         logArea.innerHTML += `<p> A : ${A} ， B : ${B} ，輸入數字為 ${input.value} </p>`;
+        while(A==4){
+          alert(`猜對囉，正確答案為${ansNumber}`);
+          break;
+        }
       }
       function NewGame() {
         ansNumber = Random_number(4, 10);
