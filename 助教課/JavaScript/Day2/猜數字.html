@@ -206,20 +206,17 @@
       function Foolproof() {
         //將inputArray重新建立，並替換重複數字
         let newArray = inputNumberArray.filter((num, idx, arr) => {
-          if (arr.indexOf(num) === idx) {
-            return arr.indexOf(num)
-          }
-          //等效果 return arr.indexOf(num) === idx; 
+          // if (arr.indexOf(num) === idx) {
+          //   return arr.indexOf(num)
+          // }
+          return arr.indexOf(num) === idx; // 等效果
         })
+        console.log(newArray);
         if ((input.value).length != 4) {
           alert("請輸入4位數字");
           Reset()
           return false;
-        } else if (newArray.length != 4) {
-          alert("請輸入4位不同的數字");
-          Reset()
-          return false;
-        }
+        }         
         else {
           return true;
         }
