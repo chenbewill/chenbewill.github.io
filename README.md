@@ -26,3 +26,4 @@ F12 切換裝置會壞掉
 [360Altis](https://chenbewill.github.io/JavaScript/Day%202/360Altis.html)   
 [手刻版Maikon.html](https://chenbewill.github.io/HTML&CSS/Day7/手刻版Maikon.html)  
 [Boostrap_Whoscall](https://chenbewill.github.io/HTML&CSS/Day7/Boostrap版whoscall)
+[猜數字]()
