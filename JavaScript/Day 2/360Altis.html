@@ -136,10 +136,9 @@
             imgs: [],
         }
         //物件建立圖片
-        function GetCartPic(color) {
-            //先1種
+        function GetCartPic(color) {         
             for (let ctype = 0; ctype < 6; ctype++) {
-                //先2張..
+            
                 for (let i = 1; i <= 60; i++) {
                     let picSource = `./imgSource/360EXT_1_${color}_${i}.png`;
                     carData.imgs.push(picSource);
@@ -201,8 +200,8 @@
                 }
                 else {
                     nextPic = tgPics[index + 1];
-                    backPic = tgPics[index - 1]
-                }
+                    backPic = tgPics[index - 1];
+                }                
                 if (sender.className.includes("backward")) {
                     backPic.classList.add("show");
                 } else {
@@ -210,7 +209,6 @@
                 }
                 currentPic.classList.remove("show");
             }
-
             //委派換色btn事件
             document.querySelectorAll(".btn").forEach(el => {
                 el.addEventListener("mousedown", changeTitle);
@@ -235,9 +233,11 @@
             };
             //持續選轉事件
             function keepeven() {
-                timeinter = setInterval((el) => {
-                    changeImage(this);
-                }, 100);
+                // timeinter = setInterval((el) => {
+                //     changeImage(this);
+                // }, 100);
+                // bind
+                timeinter = setInterval(changeImage.bind(null,this), 100);
 
             }
             function stopKeep() {
