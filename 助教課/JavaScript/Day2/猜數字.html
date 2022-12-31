@@ -117,9 +117,9 @@
       const newGameBTN = document.querySelector(`[data-value="newGame"]`);
       const logArea = document.querySelector(".logInfo");
       const watchAnsBTN = document.querySelector(`[data-value="watchAns"]`);
-      let counter=0;
-      ansNumber = Random_number(4, 10);
-      console.log(ansNumber);
+      let counter = 0;//顯示遊戲次數
+      ansNumber = Random_number(4, 10);//產生亂數
+      console.log(ansNumber); 
       numBTN.forEach((el) => {
         el.addEventListener("click", BtnClick);
       })
@@ -133,18 +133,16 @@
       newGameBTN.addEventListener("click", NewGame);
       backwordBTN.addEventListener("click", Backword);
       watchAnsBTN.addEventListener("click", WatchAns);
-      //預防手機連點畫面展開
-      document.addEventListener("dblclick", () => {
-        return;
-      });
+      //#region  主要功能區
+      //顯示文字
       function BtnClick() {
         const btnValue = event.target.getAttribute("data-value");
         while ((input.value).length >= 4) {
           return;
         }
-        //顯示輸入文字
         input.value += btnValue;
       }
+      //送出答案
       function CheckAns() {
         inputNumberArray = (input.value).split("");
         let A = 0;
@@ -161,29 +159,33 @@
             break;
           }
         })
-        counter+=1;
+        counter += 1;
         logArea.innerHTML += `<p> A : ${A} ， B : ${B} ，輸入數字為 ${input.value} ，第 ${counter} 次</p>`;
-        logArea.scrollTop=10000000;
+        logArea.scrollTop = 10000000;//卷軸顯示最下面
         while (A == 4) {
           alert(`猜對囉，正確答案為${ansNumber}，本次使用${counter}次`);
           blockNumBTN(true);
           break;
         }
       }
+      //新遊戲
       function NewGame() {
         ansNumber = Random_number(4, 10);
         console.log(ansNumber);
-        counter=0;
+        counter = 0;
         logArea.innerHTML = "";
         Reset();
         blockNumBTN(false);
       }
+      //清除輸入區
       function ClearnInput() {
         input.value = "";
       }
+      //重新開始
       function Reset() {
         input.value = "";
       }
+      //隨機亂數
       function Random_number(count, range) {
         let result = []
         for (let i = 0; i < count; i++) {
@@ -198,9 +200,11 @@
         }
         return result;
       }
+      //倒退
       function Backword() {
         input.value = (input.value).substring(0, `${(input.value).length - 1}`);
       }
+      //防呆
       function Foolproof() {
         //字串轉陣列
         inputNumberArray = (input.value).split("");
@@ -225,15 +229,25 @@
 
         //防呆重複數字??
       }
+      //看答案
       function WatchAns() {
         alert(`答案為${ansNumber}`);
         blockNumBTN(true);
       }
-      function blockNumBTN(state){
-        numBTN.forEach((btn)=>{
-          btn.disabled=state;
+      //#endregion
+      //#region 亂加一通區塊
+      //鎖定按鈕
+      function blockNumBTN(state) {
+        numBTN.forEach((btn) => {
+          btn.disabled = state;
         })
       }
+      //預防手機連點畫面展開
+      document.addEventListener("dblclick", () => {
+        return;
+      });
+
+      //#endregion
 
     }
   </script>
