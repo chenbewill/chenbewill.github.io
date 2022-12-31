@@ -35,7 +35,7 @@
 
     @media screen and (min-width:1024px) {
       .logInfo {
-        max-height: 80vh;
+        max-height: 40vh;
         height: 100%;
       }
     }
@@ -163,6 +163,7 @@
         })
         counter+=1;
         logArea.innerHTML += `<p> A : ${A} ， B : ${B} ，輸入數字為 ${input.value} ，第 ${counter} 次</p>`;
+        logArea.scrollTop=10000000;
         while (A == 4) {
           alert(`猜對囉，正確答案為${ansNumber}，本次使用${counter}次`);
           blockNumBTN(true);
@@ -207,7 +208,6 @@
         let newArray = inputNumberArray.filter((num, idx, arr) => {
           return arr.indexOf(num) === idx;
         })
-        console.log(newArray);
         if ((input.value).length != 4) {
           alert("請輸入4位數字");
           Reset()
