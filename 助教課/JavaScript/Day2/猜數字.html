@@ -39,8 +39,6 @@
       }
     }
 
-
-
     .item {
       width: calc(100% / 3 - 20px);
       min-height: 20px;
@@ -117,6 +115,7 @@
       const resetBTN = document.querySelector(`[data-value="reset"]`);
       const newGameBTN = document.querySelector(`[data-value="newGame"]`);
       const logArea = document.querySelector(".logInfo");
+      const watchAnsBTN = document.querySelector(`[data-value="watchAns"]`);
       ansNumber = Random_number(4, 10);
       console.log(ansNumber);
       numBTN.forEach((el) => {
@@ -130,9 +129,12 @@
       });
       resetBTN.addEventListener("click", Reset);
       newGameBTN.addEventListener("click", NewGame);
-      backwordBTN.addEventListener("click", Backword)
-
-
+      backwordBTN.addEventListener("click", Backword);
+      watchAnsBTN.addEventListener("click", WatchAns);
+      //預防手機連點畫面展開
+      document.addEventListener("dblclick", () => {
+        return;
+      });
       function BtnClick() {
         const btnValue = event.target.getAttribute("data-value");
         while ((input.value).length >= 4) {
@@ -218,8 +220,10 @@
         //防呆重複數字??
       }
       function WatchAns() {
-
+        alert(`答案為${ansNumber}`);
+        NewGame();
       }
+
 
     }
   </script>
