@@ -25,15 +25,18 @@
       display: flex;
       flex-wrap: wrap;
     }
-
-
-    .logInfo {
+    .logArea{
       border: 1px solid black;
-      height: 20vh;
       overflow-y: scroll;
     }
 
-    @media screen and (min-width:1024px) {
+    .logInfo {
+      
+      height: 20vh;
+  
+    }
+
+    @media screen and (min-width:768px) {
       .logInfo {
         max-height: 40vh;
         height: 100%;
@@ -61,8 +64,8 @@
         <div class="main_Title col-12">
           <h2 class="m-4">猜數字</h2>
         </div>
-        <div class="d-flex flex-wrap flex-lg-row-reverse">
-          <div class="wrap col-12 col-md-6 d-flex flex-wrap justify-content-center">
+        <div class="d-flex flex-wrap flex-md-row-reverse">
+          <div class="logArea wrap col-11 col-md-5 d-flex flex-wrap justify-content-center m-2">
             <div class="logInfo col-12 ">
             </div>
           </div>
@@ -70,7 +73,7 @@
             <div class="output col-12 col-md-8 p-3">
               <div>作答區域</div>
               <div class="input col-12">
-                <input type="number" class="numStorage col-12 text-center" placeholder="請輸入四位不重複的數字">
+                <input type="number" class="numStorage col-12  text-center" placeholder="請輸入四位不重複的數字">
                 </input>
               </div>
             </div>
