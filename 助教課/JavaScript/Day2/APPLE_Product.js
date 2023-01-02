@@ -2,8 +2,8 @@
 window.onload = () => {
     //初始化設定
     const iPhoneArea = document.querySelector(".section_iPhone");
-    const iPadArea = document.querySelector(".section_iPad");
-    const MackBook = document.querySelector(".section_MackBook");
+    // const iPadArea = document.querySelector(".section_iPad");
+    // const MackBook = document.querySelector(".section_MackBook");
     let viewSPU = "iPhone";
     let viewSKU = "iPhone 13mini";
     let productType;
