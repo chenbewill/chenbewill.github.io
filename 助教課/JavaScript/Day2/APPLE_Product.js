@@ -114,7 +114,6 @@ window.onload = () => {
         })
     }
     //SKU資訊-載入圖片
-    // "owl-carousel","owl-theme"
     function GetPic(color) {
         const picArea = document.querySelector(".pic");
         picArea.innerText = "";
@@ -122,11 +121,6 @@ window.onload = () => {
             item["圖片"].forEach((imgCollection, index) => {
                 let div = document.createElement("div");
                 div.classList.add("col-12","d-none");
-                if(index==0){
-                    div.classList.add("position-relative");
-                }else{
-                    div.classList.add("position-absolute");
-                }
                 div.classList.add("carousel", "slide", "carousel-inner","carousel-dark")
                 div.setAttribute("id", `carousel${index}`)//輪播
                 div.setAttribute("data-color", `${imgCollection["顏色"]}`);
