@@ -121,7 +121,12 @@ window.onload = () => {
         porductSKU.filter((item) => {
             item["圖片"].forEach((imgCollection, index) => {
                 let div = document.createElement("div");
-                div.classList.add("col-12", "position-absolute", "d-none");
+                div.classList.add("col-12","d-none");
+                if(index==0){
+                    div.classList.add("position-relative");
+                }else{
+                    div.classList.add("position-absolute");
+                }
                 div.classList.add("carousel", "slide", "carousel-inner","carousel-dark")
                 div.setAttribute("id", `carousel${index}`)//輪播
                 div.setAttribute("data-color", `${imgCollection["顏色"]}`);
@@ -141,31 +146,34 @@ window.onload = () => {
                     div.appendChild(divitem);
                     picArea.appendChild(div);
                 })
-                //#region 輪播 
-                //prev按鈕
-                let button = document.createElement("button");
-                let span = document.createElement("span");
-                span.classList.add("carousel-control-prev-icon");
-                span.setAttribute("aria-hidden", "true");
-                button.appendChild(span.cloneNode(true));
-                span.innerHTML="";
-                button.classList.add("carousel-control-prev");
-                button.setAttribute("data-bs-target", `#carousel${index}`);
-                button.setAttribute("data-bs-slide", `prev`);
-                div.appendChild(button.cloneNode(true));
-                button.innerHTML="";
-                //next按鈕
-                button.classList.remove("carousel-control-prev");
-                span.classList.remove("carousel-control-prev-icon");
-                console.log(span);
-                console.log(button);
-                span.classList.add("carousel-control-next-icon");
-                span.setAttribute("aria-hidden", "true");     
-                button.appendChild(span);
-                button.classList.add("carousel-control-next");
-                button.setAttribute("data-bs-target", `#carousel${index}`)
-                button.setAttribute("data-bs-slide", `next`)
-                div.appendChild(button);
+                //#region 輪播                 
+                while(imgCollection["裝置圖片"].length>1){
+                    //prev按鈕
+                    let button = document.createElement("button");
+                    let span = document.createElement("span");
+                    span.classList.add("carousel-control-prev-icon");
+                    span.setAttribute("aria-hidden", "true");
+                    button.appendChild(span.cloneNode(true));
+                    span.innerHTML="";
+                    button.classList.add("carousel-control-prev");
+                    button.setAttribute("data-bs-target", `#carousel${index}`);
+                    button.setAttribute("data-bs-slide", `prev`);
+                    div.appendChild(button.cloneNode(true));
+                    button.innerHTML="";
+                    //next按鈕
+                    button.classList.remove("carousel-control-prev");
+                    span.classList.remove("carousel-control-prev-icon");
+                    console.log(span);
+                    console.log(button);
+                    span.classList.add("carousel-control-next-icon");
+                    span.setAttribute("aria-hidden", "true");     
+                    button.appendChild(span);
+                    button.classList.add("carousel-control-next");
+                    button.setAttribute("data-bs-target", `#carousel${index}`)
+                    button.setAttribute("data-bs-slide", `next`)
+                    div.appendChild(button);
+                    break;
+                }
                 //#endregion
             })
 
