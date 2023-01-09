@@ -1,51 +1,120 @@
-const calendarArea = document.querySelector(".section_Calendar .calendar");
 
-//想用Template!!
+//宣告
+const today = new Date();
+let year = today.getFullYear();
+let month = today.getMonth();
 
-//建立日曆
-// 7*5 大小 
-CreateCalendar()
-function CreateCalendar() {
-    //表頭
-    const thead = document.createElement("thead");
-    thead.classList.add("d-flex", "flex-wrap");
-    const week = ["SunDay", "MonDay", "TuesDay", "WednesDay", "ThursDay", "FriDay", "SaturDay"]
-    const thtr = document.createElement("tr");
-    thtr.classList.add("col-12", "d-flex", "flex-wrap", "justify-content-center");
-    for (let i = 0; i < week.length; i++) {
-        const thtd = document.createElement("td");
-        thtd.classList.add("week", "border", "border-2", "border-dark", "p-2");
-        thtd.innerText=week[i];
-        thtr.appendChild(thtd);
-    }
-    thead.appendChild(thtr);
-    calendarArea.appendChild(thead);
+//目標DOM物件
+const monthTitleArea = document.querySelector("#monthDisplay");
+const calendarArea = document.querySelector("#calendar");
+const nextBtn = document.querySelector("#nextButton");
+const backBtn = document.querySelector("#backButton");
+const addModalBtn = document.querySelector("#addModalsubmit")
+const editModalBtn = document.querySelector("#editModalsubmit")
+const addArea = document.querySelector("#addModal");
+const todoTitle = addArea.querySelector("#addModaltitle");
+const todoContent = addArea.querySelector("#addModalcontent")
+const todoDate = document.querySelector("#addModalDate")
+const editArea = document.querySelector("#editModal");
+const editTodoTitle = editArea.querySelector("#editModaltitle");
+const editTodoContent = editArea.querySelector("#editModalcontent")
+const editTodoDate = document.querySelector("#editModalDate")
 
-    // 表身
-    const tbody = document.createElement("tbody");
-    tbody.classList.add("d-flex", "flex-wrap");
-    let num = 1;
-    for (let i = 0; i < 5; i++) {
-        const tr = document.createElement("tr");
-        tr.classList.add("col-12", "d-flex", "flex-wrap", "justify-content-center");
-        for (let i2 = 0; i2 < 7; i2++) {
-            const td = document.createElement("td");
-            td.innerText = num;
-            td.classList.add("day", "border", "border-2", "border-dark", "p-2");
-            num++;
-            tr.appendChild(td);
+
+//function
+function renderDate() {
+    monthTitleArea.innerText = `${year}年，${month + 1}月`;
+    calendarArea.innerHTML = "";
+    //該月第一天是星期幾
+    let dayOfMonth = new Date(year, month, 1).getDay();
+    //該月份幾天
+    let dateOfMonth = new Date(year, month + 1, 0).getDate();
+    //日期計算
+    let dateCount = 1;
+    //填充日期
+    for (let d = 1; d <= dateOfMonth + dayOfMonth; d++) {
+        let dayDiv = document.createElement("div");
+        dayDiv.classList.add("day");
+        if (d <= dayOfMonth) {
+            dayDiv.classList.add("padding");
         }
-        tbody.appendChild(tr);
+        else {
+            dayDiv.innerText = dateCount;
+            let forDay = dateCount;
+            dayDiv.addEventListener("click", function () {
+                bootstrap.Modal.getOrCreateInstance(addModal).show()
+                todoDate.value = `${year}-${(month + 1).toString().padStart(2, "0")}-${(forDay).toString().padStart(2, "0")}`;
+                todoTitle.value = "";
+                todoContent.value = ""
+            })
+            //讀取Storage取得符合資料
+            if (localStorage.getItem(`${year}-${month + 1}-${dateCount}`) != null) {
+                let data = JSON.parse(localStorage.getItem(`${year}-${month + 1}-${dateCount}`));
+                let ol = document.createElement("ol")
+                let li = document.createElement("li")
+                li.innerText = data.title;
+                li.addEventListener("click", function (event) {
+                    let data = JSON.parse(localStorage.getItem(`${year}-${month + 1}-${forDay}`));
+                    bootstrap.Modal.getOrCreateInstance(editModal).show()                  
+                    editTodoDate.value = `${year}-${(month + 1).toString().padStart(2, "0")}-${forDay.toString().padStart(2, "0")}`;                  
+                    editTodoTitle.value=data["title"];
+                    editTodoContent.value=data["content"];
+                    event.stopPropagation();
+                })
+                ol.appendChild(li)
+                dayDiv.appendChild(ol);
+            }
+            dateCount++;
+        }
+        calendarArea.appendChild(dayDiv);
     }
-    calendarArea.appendChild(tbody);
-    num = 1;
 }
-// 年分
-function GetYear(sender) {
+function changeMonth(event) {
+    if (event.target.id == "backButton") {
+        month--;
+        if (month == -1) {
+            year--;
+            month = 11
+        }
+    } else {
+        month++;
+        if (month == 12) {
+            year++;
+            month = 0
+        }
+    }
+    renderDate()
+}
+function addEvent() {
+    nextBtn.addEventListener("click", changeMonth)
+    backBtn.addEventListener("click", changeMonth)
+    addModalBtn.addEventListener("click", addTodoList)
+    editModalBtn.addEventListener("click", editTodoList)
+}
+function addTodoList(event) {
+    const date = new Date(addArea.querySelector("#addModalDate").value)
+    let todoItem = {
+        title: todoTitle.value,
+        content: todoContent.value
+    }
+    localStorage.setItem(`${year}-${month + 1}-${date.getDate()}`, `${JSON.stringify(todoItem)}`);
+    bootstrap.Modal.getOrCreateInstance(addModal).hide()
+    renderDate()
+}
+
+function editTodoList() {
+    const date = new Date(editTodoDate.value)
+    let editItem={
+        title:editTodoTitle.value,
+        content:editTodoContent.value
+    }
+    localStorage.setItem(`${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`,`${JSON.stringify(editItem)}`);
+    bootstrap.Modal.getOrCreateInstance(editModal).hide()
+    renderDate()
+}
+
+window.onload = function () {
+    renderDate()
+    addEvent()
 
 }
-// 月份
-function GetMounth() { }
-// 日期
-function GetDay() { }
-
