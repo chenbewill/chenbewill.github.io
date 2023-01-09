@@ -49,19 +49,17 @@ function renderDate() {
             })
             //讀取Storage取得符合資料
             if (localStorage.getItem(`${year}-${month + 1}-${dateCount}`) != null) {
-                let data = JSON.parse(localStorage.getItem(`${year}-${month + 1}-${dateCount}`));
-                let ol = document.createElement("ol")
-                let li = document.createElement("li")
-                li.innerText = data.title;
-                li.addEventListener("click", function (event) {
-                    let data = JSON.parse(localStorage.getItem(`${year}-${month + 1}-${forDay}`));
-                    bootstrap.Modal.getOrCreateInstance(editModal).show()                  
-                    editTodoDate.value = `${year}-${(month + 1).toString().padStart(2, "0")}-${forDay.toString().padStart(2, "0")}`;                  
-                    editTodoTitle.value=data["title"];
-                    editTodoContent.value=data["content"];
-                    event.stopPropagation();
+                let dataArray = JSON.parse(localStorage.getItem(`${year}-${month + 1}-${dateCount}`));
+                let ol = document.createElement("ol");
+                dataArray.forEach((date, index) => {
+                    let li = document.createElement("li");
+                    li.setAttribute("data-idx",index);
+                    li.innerText = date["title"];
+                    li.classList.add("event");
+                    li.addEventListener("click", showEditModal.bind(null,date ,forDay))
+                    ol.appendChild(li)
+
                 })
-                ol.appendChild(li)
                 dayDiv.appendChild(ol);
             }
             dateCount++;
@@ -69,6 +67,17 @@ function renderDate() {
         calendarArea.appendChild(dayDiv);
     }
 }
+function showEditModal(date,forDay) { 
+    bootstrap.Modal.getOrCreateInstance(editModal).show()
+    editTodoDate.value = `${year}-${(month + 1).toString().padStart(2, "0")}-${(forDay).toString().padStart(2, "0")}`;
+    editTodoTitle.value = date["title"];
+    editTodoContent.value = date["content"];
+    idx=event.target.getAttribute("data-idx");
+    
+    editModalBtn.addEventListener("click", editTodoList.bind(null,idx))
+    event.stopPropagation();
+}
+
 function changeMonth(event) {
     if (event.target.id == "backButton") {
         month--;
@@ -89,26 +98,31 @@ function addEvent() {
     nextBtn.addEventListener("click", changeMonth)
     backBtn.addEventListener("click", changeMonth)
     addModalBtn.addEventListener("click", addTodoList)
-    editModalBtn.addEventListener("click", editTodoList)
+    
 }
 function addTodoList(event) {
     const date = new Date(addArea.querySelector("#addModalDate").value)
+    let todoList = [];
     let todoItem = {
         title: todoTitle.value,
         content: todoContent.value
     }
-    localStorage.setItem(`${year}-${month + 1}-${date.getDate()}`, `${JSON.stringify(todoItem)}`);
+    if (localStorage.getItem(`${year}-${month + 1}-${date.getDate()}`) != null) {
+        todoList = JSON.parse(localStorage.getItem(`${year}-${month + 1}-${date.getDate()}`));
+    }
+    todoList.push(todoItem)
+    localStorage.setItem(`${year}-${month + 1}-${date.getDate()}`, `${JSON.stringify(todoList)}`);
     bootstrap.Modal.getOrCreateInstance(addModal).hide()
     renderDate()
 }
 
-function editTodoList() {
+function editTodoList(idx) {
     const date = new Date(editTodoDate.value)
-    let editItem={
-        title:editTodoTitle.value,
-        content:editTodoContent.value
-    }
-    localStorage.setItem(`${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`,`${JSON.stringify(editItem)}`);
+    let todoList=JSON.parse(localStorage.getItem(`${year}-${month + 1}-${date.getDate()}`));
+    todoList[idx]["title"]=editTodoTitle.value
+    todoList[idx]["content"]=editTodoContent.value
+    
+    localStorage.setItem(`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`, `${JSON.stringify(todoList)}`);
     bootstrap.Modal.getOrCreateInstance(editModal).hide()
     renderDate()
 }
