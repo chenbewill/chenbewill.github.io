@@ -156,6 +156,7 @@
         GetCartPic(18);//資料顏色代號為數字
         window.onload = function () {
             const mainPic = document.querySelector(".main_pic");
+            let speed=100;
             let timeinter;
             //產生DOMimg
             CreatDOMimg();
@@ -181,11 +182,12 @@
                 }
             }
             //點擊轉向事件  (滑鼠長按不放?1.計時器)
-
             document.querySelectorAll(".control_btn").forEach(el => {
                 el.addEventListener("mousedown", keepeven);
-                el.addEventListener("mouseup", stopKeep)
             })
+            //全域偵測滑鼠放開事件
+            document.addEventListener("mouseup", stopKeep);
+
             // 轉向fn
             function changeImage(sender) {
                 //當前顯示的圖片
@@ -244,7 +246,7 @@
                 //     changeImage(this);
                 // }, 100);
                 // bind
-                timeinter = setInterval(changeImage.bind(null,this), 100);
+                timeinter = setInterval(changeImage.bind(null,this), speed);
 
             }
             function stopKeep() {
