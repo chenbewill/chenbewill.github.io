@@ -16,14 +16,14 @@
         }
 
         [move-id] {
-            height: 150px;
+            height: calc(100vh/6);
             position: relative;
             background-color: wheat;
 
         }
 
         [monstBorn] {
-            height: 150px;
+            height: calc(100vh/6);
             position: relative;
             background-image: url("./image/tree-solid.svg");
             background-repeat: space;
@@ -57,11 +57,10 @@
             background-image:url("./image/user-astronaut-solid.svg") ;
             z-index: 3;
         }
-
-        .container {
-            overflow: hidden;
-            padding: 50px;
+        .container{  
+            min-width: 100px !important;
         }
+  
     </style>
 </head>
 
