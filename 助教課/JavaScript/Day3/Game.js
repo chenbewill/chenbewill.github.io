@@ -150,7 +150,7 @@ function movePlayer() {
     playerCoordinate["bottom"] = player.getBoundingClientRect()["bottom"];
 }
 function moveMonst(event) {
-    //不是設定會不能動 !?
+    //不設定會不能動 !?
     event.style.left += 0;
     event.style.top += 0;
     event.style.right += 0;
@@ -164,7 +164,7 @@ function moveMonst(event) {
             return calCoordinate(this)
         }
     }
-    //下面兩個寫法一樣，都是啟動function
+    //下面兩個寫法一樣，都是啟動屬性內的function
     let mCenter = monstCoordinate.center();
     let pCenter = playerCoordinate["center"]();
     let monstData = JSON.parse(event.dataset.monstobj);
@@ -257,7 +257,6 @@ function attackMonst() {
     monst.setAttribute("data-monsthp", mhp);
     if (mhp <= 0) {
         document.querySelector(`[data-monstid="${monst.dataset.monstid}"]`).parentNode.innerHTML = "";
-
         mCounter--;
         while (mCounter == 0) {
             gameFinish()
@@ -289,7 +288,7 @@ function loadRecord() {
     }
 }
 function renderPage() {
-    stateArea.innerText = `Level${level},怪物數量${monstArray.length}`;
+    stateArea.innerText = `Level${level}，怪物數量${monstArray.length}`;
 }
 
 window.onload = function () {
@@ -302,7 +301,7 @@ window.onload = function () {
         renderPage()
     });
     playerAction()
-    stateArea.innerText = `Level${level},怪物數量${monstArray.length}`;
+    stateArea.innerText = `Level${level}，怪物數量${monstArray.length}`;
 }
 
 
