@@ -44,14 +44,15 @@
             z-index: 1;
             cursor: crosshair;
         }
-
+        /* #player:active, */
         .monst:active {
-            opacity: 0;
+            scale: 2;
+            transition: 0.1s;
+            background-size: cover;
+            background-image: url("./image/fffff.png") !important;
         }
 
-        .monst:hover {
-            border: 1px solid red;
-        }
+
 
         #player {
             width: 20px;
