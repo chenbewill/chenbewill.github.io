@@ -35,7 +35,6 @@ const monstData = [
         img: "./image/ghost-solid.svg"
     },
 ]
-// let liveTime=0;
 let steps = 0;
 let playerSpeed = 10;
 let current = 0;
@@ -45,6 +44,7 @@ let intervalArray = [];
 let playerInterval = [];
 let playerServiseTime = 0;
 let mCounter;
+
 //DOM
 const player = document.querySelector("#player")
 const startBtn = document.querySelector("#startBtn");
@@ -101,16 +101,129 @@ function createMonstOBJ(lv) {
     console.log(monstArray)
 }
 
+
+
 function playerAction() {
-    // 斜向移動
-    // keydown 持續觸發 待修正
-    // document.addEventListener("keydown",function keepMove(){
-    //     playerInterval.push(setInterval(movePlayer.bind(null,event),500));
-    // })
-    // keyup 1次
-    document.addEventListener("keydown", movePlayer.bind(null, event))
+    document.addEventListener("keyup", () => {
+        keyOff(event.key)
+        console.log(event.key)
+
+        checkKey()
+
+    })
+    document.addEventListener("keydown", () => {
+        player.style.top += 0;
+        player.style.right += 0;
+        player.style.bottom += 0;
+        player.style.left += 0;
+        keyOn(event.key)
+        checkKey()
+
+    })
+    // document.addEventListener("keydown", movePlayer.bind(null, event))
 }
+let arrowMove = {
+    ArrowUp: false,
+    ArrowDown: false,
+    ArrowLeft: false,
+    ArrowRight: false
+};
+let left, right, up, down
+
+function checkKey() {
+
+    if (arrowMove["ArrowUp"]) {
+        if (up != undefined) {
+            return
+        } else {
+
+            up = setInterval(goUp, 100)
+        }
+    } else {
+        clearInterval(up)
+        up = undefined
+    }
+    if (arrowMove["ArrowLeft"]) {
+        if (left != undefined) {
+            return
+        } else {
+            left = setInterval(goLeft, 100)
+        }
+    } else {
+        clearInterval(left)
+        left = undefined
+
+    }
+    if (arrowMove["ArrowDown"]) {
+        if (down != undefined) {
+            return
+        } else {
+            down = setInterval(goDown, 100)
+        }
+    } else {
+        clearInterval(down)
+        down = undefined
+    }
+    if (arrowMove["ArrowRight"]) {
+        if (right != undefined) {
+            return
+        } else {
+            right = setInterval(goRight, 100)
+        }
+    } else {
+        clearInterval(right)
+        right = undefined
+
+    }
+
+}
+function keyOn(key) {
+    arrowMove[key] = true;
+}
+function keyOff(key) {
+    arrowMove[key] = false
+}
+function goUp() {
+    if (playerCoordinate.top <= moveRange.top) {
+        return;
+    }
+    player.style.top = parseInt(player.style.top) - playerSpeed + "px";
+    playerCoordinate["left"] = player.getBoundingClientRect()["left"];
+    playerCoordinate["top"] = player.getBoundingClientRect()["top"];
+    playerCoordinate["right"] = player.getBoundingClientRect()["right"];
+    playerCoordinate["bottom"] = player.getBoundingClientRect()["bottom"];  
+}
+function goDown() {
+    if (playerCoordinate.bottom >= moveRange.bottom) {
+        return;
+    }
+    player.style.bottom = parseInt(player.style.bottom) - playerSpeed + "px";
+    playerCoordinate["left"] = player.getBoundingClientRect()["left"];
+    playerCoordinate["top"] = player.getBoundingClientRect()["top"];
+    playerCoordinate["right"] = player.getBoundingClientRect()["right"];
+    playerCoordinate["bottom"] = player.getBoundingClientRect()["bottom"];}
+function goRight() {
+    if (playerCoordinate.right >= moveRange.right) {
+        return;
+    }
+    player.style.right = parseInt(player.style.right) - playerSpeed + "px";
+    playerCoordinate["left"] = player.getBoundingClientRect()["left"];
+    playerCoordinate["top"] = player.getBoundingClientRect()["top"];
+    playerCoordinate["right"] = player.getBoundingClientRect()["right"];
+    playerCoordinate["bottom"] = player.getBoundingClientRect()["bottom"];}
+function goLeft() {
+    if (playerCoordinate.left <= moveRange.left) {
+        return;
+    }
+    player.style.left = parseInt(player.style.left) - playerSpeed + "px";
+    playerCoordinate["left"] = player.getBoundingClientRect()["left"];
+    playerCoordinate["top"] = player.getBoundingClientRect()["top"];
+    playerCoordinate["right"] = player.getBoundingClientRect()["right"];
+    playerCoordinate["bottom"] = player.getBoundingClientRect()["bottom"];}
+
+
 function movePlayer() {
+
     //不設定會不能動=_=
     player.style.top += 0;
     player.style.right += 0;
@@ -131,11 +244,9 @@ function movePlayer() {
             break;
         case "ArrowRight":
             if (playerCoordinate.right >= moveRange.right) {
-
                 return;
             }
             player.style.right = parseInt(player.style.right) - playerSpeed + "px";
-
             break;
         case "ArrowDown":
             if (playerCoordinate.bottom >= moveRange.bottom) {
@@ -193,8 +304,12 @@ function moveMonst(event) {
         intervalArray.forEach(intval => {
             clearInterval(intval)
         })
+        arrowMove.ArrowUp = false
+        arrowMove.ArrowDown = false
+        arrowMove.ArrowLeft = false
+        arrowMove.ArrowRight = false
+        checkKey()
         alert("死掉囉")
-
         break;
     }
 }
@@ -270,7 +385,12 @@ function gameFinish() {
     alert(`恭喜LV${level}，過關囉`)
     startBtn.disabled = false;
     level++;
-    mCounter = 0
+    mCounter = 0;
+    arrowMove.ArrowUp = false
+    arrowMove.ArrowDown = false
+    arrowMove.ArrowLeft = false
+    arrowMove.ArrowRight = false
+    checkKey()
     renderPage()
 }
 function playerRecord() {
