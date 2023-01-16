@@ -36,7 +36,7 @@ const monstData = [
     },
 ]
 let steps = 0;
-let playerSpeed = 10;
+let playerSpeed = 15;
 let current = 0;
 let level = 1;
 let idx = 0;
