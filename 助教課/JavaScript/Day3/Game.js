@@ -106,10 +106,7 @@ function createMonstOBJ(lv) {
 function playerAction() {
     document.addEventListener("keyup", () => {
         keyOff(event.key)
-        console.log(event.key)
-
         checkKey()
-
     })
     document.addEventListener("keydown", () => {
         player.style.top += 0;
@@ -136,7 +133,6 @@ function checkKey() {
         if (up != undefined) {
             return
         } else {
-
             up = setInterval(goUp, 100)
         }
     } else {
