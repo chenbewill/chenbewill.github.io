@@ -5,33 +5,33 @@ const monstData = [
     {
         id: "",
         type: "A",
-        hp: 6,
+        hp: 1,
         armor: 0,
-        speed: 2,
+        speed: 1,
         img: "./image/poo-solid.svg"
     },
     {
         id: "",
         type: "B",
-        hp: 5,
+        hp: 1,
         armor: 1,
-        speed: 3,
+        speed: 2,
         img: "./image/robot-solid.svg"
     },
     {
         id: "",
         type: "C",
-        hp: 3,
+        hp: 2,
         armor: 0,
-        speed: 4,
+        speed: 3,
         img: "./image/optin-monster.svg"
     },
     {
         id: "",
         type: "D",
-        hp: 2,
+        hp: 3,
         armor: 0,
-        speed: 5,
+        speed: 4,
         img: "./image/ghost-solid.svg"
     },
 ]
@@ -126,20 +126,78 @@ let arrowMove = {
     ArrowRight: false
 };
 let left, right, up, down
+let up_left, up_right
+let down_left, down_right
 
 function checkKey() {
-
-    if (arrowMove["ArrowUp"]) {
-        if (up != undefined) {
+    if (arrowMove["ArrowUp"] && arrowMove["ArrowLeft"]) {
+        if (up_left != undefined) {
             return
         } else {
+            up_left = setInterval(goUpLeft, 100)
+        }
+    }else {
+        clearInterval(up_left)
+        up_left=undefined
+    }
+
+    if (arrowMove["ArrowUp"] && arrowMove["ArrowRight"]) {
+        if (up_right != undefined) {
+            return
+        } else {
+            up_right = setInterval(goUpRight, 100)
+        }
+    }else {
+        clearInterval(up_right)
+        up_right=undefined
+    }
+
+    if (arrowMove["ArrowDown"] && arrowMove["ArrowLeft"]) {
+        if (down_left != undefined) {
+            return
+        } else {
+
+            down_left = setInterval(goDownLeft, 100)
+        }
+    }else {
+        clearInterval(down_left)
+        down_left=undefined
+    }
+    if (arrowMove["ArrowDown"] && arrowMove["ArrowRight"]) {
+        if (down_right != undefined) {
+            return
+        } else {
+            down_right = setInterval(goDownRight, 100)
+        }
+    } else {
+        clearInterval(down_right)
+        down_right=undefined
+    }
+
+
+
+    if (arrowMove["ArrowUp"]&&arrowMove["ArrowRight"]==false&&arrowMove["ArrowLeft"]==false) {
+        if (up != undefined) {
+            return
+        }
+        else {
             up = setInterval(goUp, 100)
         }
     } else {
         clearInterval(up)
         up = undefined
     }
-    if (arrowMove["ArrowLeft"]) {
+    if (arrowMove["ArrowDown"]&&arrowMove["ArrowRight"]==false&&arrowMove["ArrowLeft"]==false) {
+        if (down != undefined) {
+            return
+        } else {
+            down = setInterval(goDown, 100)
+        }
+    } else {
+        clearInterval(down)
+        down = undefined
+    }
+    if (arrowMove["ArrowLeft"]&&arrowMove["ArrowUp"]==false&&arrowMove["ArrowDown"]==false) {
         if (left != undefined) {
             return
         } else {
@@ -150,17 +208,7 @@ function checkKey() {
         left = undefined
 
     }
-    if (arrowMove["ArrowDown"]) {
-        if (down != undefined) {
-            return
-        } else {
-            down = setInterval(goDown, 100)
-        }
-    } else {
-        clearInterval(down)
-        down = undefined
-    }
-    if (arrowMove["ArrowRight"]) {
+    if (arrowMove["ArrowRight"]&&arrowMove["ArrowUp"]==false&&arrowMove["ArrowDown"]==false) {
         if (right != undefined) {
             return
         } else {
@@ -184,39 +232,72 @@ function goUp() {
         return;
     }
     player.style.top = parseInt(player.style.top) - playerSpeed + "px";
-    playerCoordinate["left"] = player.getBoundingClientRect()["left"];
-    playerCoordinate["top"] = player.getBoundingClientRect()["top"];
-    playerCoordinate["right"] = player.getBoundingClientRect()["right"];
-    playerCoordinate["bottom"] = player.getBoundingClientRect()["bottom"];  
+    setPlayerCorrdinate()
 }
+function goUpLeft() {
+    
+    if (playerCoordinate.top <= moveRange.top || playerCoordinate.left <= moveRange.left) {
+   
+        return;
+    }
+    player.style.top = parseInt(player.style.top) - playerSpeed + "px";
+    player.style.left = parseInt(player.style.left) - playerSpeed + "px";
+    setPlayerCorrdinate()
+}
+function goUpRight() {
+    if (playerCoordinate.top <= moveRange.top || playerCoordinate.right >= moveRange.right) {
+        return;
+    }
+    player.style.top = parseInt(player.style.top) - playerSpeed + "px";
+    player.style.right = parseInt(player.style.right) - playerSpeed + "px";
+    setPlayerCorrdinate()
+}
+
 function goDown() {
     if (playerCoordinate.bottom >= moveRange.bottom) {
         return;
     }
     player.style.bottom = parseInt(player.style.bottom) - playerSpeed + "px";
-    playerCoordinate["left"] = player.getBoundingClientRect()["left"];
-    playerCoordinate["top"] = player.getBoundingClientRect()["top"];
-    playerCoordinate["right"] = player.getBoundingClientRect()["right"];
-    playerCoordinate["bottom"] = player.getBoundingClientRect()["bottom"];}
+    setPlayerCorrdinate()
+}
+function goDownLeft() {
+    if (playerCoordinate.bottom >= moveRange.bottom || playerCoordinate.left <= moveRange.left) {
+        return;
+    }
+    player.style.bottom = parseInt(player.style.bottom) - playerSpeed + "px";
+    player.style.left = parseInt(player.style.left) - playerSpeed + "px";
+    setPlayerCorrdinate()
+}
+function goDownRight() {
+    if (playerCoordinate.bottom >= moveRange.bottom || playerCoordinate.right >= moveRange.right) {
+
+        return;
+    }
+    player.style.bottom = parseInt(player.style.bottom) - playerSpeed + "px";
+    player.style.right = parseInt(player.style.right) - playerSpeed + "px";
+    setPlayerCorrdinate()
+}
+
 function goRight() {
     if (playerCoordinate.right >= moveRange.right) {
         return;
     }
     player.style.right = parseInt(player.style.right) - playerSpeed + "px";
-    playerCoordinate["left"] = player.getBoundingClientRect()["left"];
-    playerCoordinate["top"] = player.getBoundingClientRect()["top"];
-    playerCoordinate["right"] = player.getBoundingClientRect()["right"];
-    playerCoordinate["bottom"] = player.getBoundingClientRect()["bottom"];}
+    setPlayerCorrdinate()
+}
 function goLeft() {
     if (playerCoordinate.left <= moveRange.left) {
         return;
     }
     player.style.left = parseInt(player.style.left) - playerSpeed + "px";
+    setPlayerCorrdinate()
+}
+function setPlayerCorrdinate() {
     playerCoordinate["left"] = player.getBoundingClientRect()["left"];
     playerCoordinate["top"] = player.getBoundingClientRect()["top"];
     playerCoordinate["right"] = player.getBoundingClientRect()["right"];
-    playerCoordinate["bottom"] = player.getBoundingClientRect()["bottom"];}
-
+    playerCoordinate["bottom"] = player.getBoundingClientRect()["bottom"];
+}
 
 function movePlayer() {
 

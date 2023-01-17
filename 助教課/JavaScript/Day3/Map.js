@@ -2,12 +2,12 @@
 let dataSouceMRT_Station;
 let dataSouceMRT_Exits;
 let dataSouceUBike;
-let MRT_Data
 let markers = L.markerClusterGroup()//marker叢集
 
 //DOM OBJ
 let map;
-const showArea = document.querySelector("#exit")
+const ExitArea = document.querySelector("#exit")
+const StationArea = document.querySelector("#station")
 // function
 function initMap() {
     map = L.map('map', {
@@ -46,11 +46,26 @@ function initDataSource() {
                     }
                 })
             })
-            renderStation()
+            renderStationMarker()
+            setSelection()
+            StationArea.addEventListener("change", renderExitMarker)
+            StationArea.addEventListener("change", showExit)
+
         })
 }
+function setSelection() {
+    dataSouceMRT_Station.forEach((stat) => {
+        const option = document.createElement("option")
+        option.innerText = stat.StationName.Zh_tw;
+        StationArea.appendChild(option);
+    })
 
-function renderStation() {
+}
+
+function renderStationMarker() {
+    if (markers) {
+        // markers.clearLayers();
+    }
     dataSouceMRT_Station.forEach((stat) => {
         let marker = L.marker([stat.StationPosition.PositionLat, stat.StationPosition.PositionLon])
         markers.addLayer(marker)
@@ -61,23 +76,53 @@ function renderStation() {
             <p>捷運出口數量:${stat.ExitInfo.length}</p>
             `
         )
-        marker.addEventListener("click", showExit.bind(null,stat))
+        // marker.addEventListener("click", showExit.bind(null, stat))
     })
     map.addLayer(markers)
 }
-function showExit(stat){
-    showArea.innerHTML="";
-    const ul = document.createElement("ul")
-    stat.ExitInfo.forEach((exit, idx) => {
-        console.log(exit)
-        const ExNameLi = document.createElement("li")
-        const AddressLi = document.createElement("li")
-        ExNameLi.innerText=`${exit.ExitName.Zh_tw}`
-        ul.appendChild(ExNameLi);
-        AddressLi.innerText=`地址:${exit.LocationDescription}`;
-        ul.appendChild(AddressLi)
+function showExit() {
+    ExitArea.innerHTML = "";
+    dataSouceMRT_Station.find(stat => {
+        if (stat.StationName.Zh_tw == StationArea.value) {
+            const ul = document.createElement("ul")
+            stat.ExitInfo.forEach((exit, idx) => {
+                const ExNameLi = document.createElement("li")
+                const AddressLi = document.createElement("li")
+                ExNameLi.innerText = `${exit.ExitName.Zh_tw}號`
+                ul.appendChild(ExNameLi);
+                AddressLi.innerText = `地址:${exit.LocationDescription}`;
+                ul.appendChild(AddressLi)
+            })
+            ExitArea.appendChild(ul)
+        }
+
     })
-    showArea.appendChild(ul)
+
+}
+function renderExitMarker() {
+    if (markers) {
+        markers.clearLayers()
+    }
+    dataSouceMRT_Station.forEach(stat => {
+        if (stat.StationName.Zh_tw == StationArea.value) {
+            stat.ExitInfo.forEach(exit => {
+                let marker = L.marker([exit.ExitPosition.PositionLat, exit.ExitPosition.PositionLon])
+                marker.bindPopup(`<h4>${exit.ExitName.Zh_tw}</h4>
+                                <p>${exit.LocationDescription}</p>
+                            `)
+                markers.addLayer(marker)
+            })
+        }
+    })
+    map.addLayer(markers)
+    dataSouceMRT_Station.find(x => {
+        if (x.StationName.Zh_tw == StationArea.value) {
+            map.setView([x.StationPosition.PositionLat, x.StationPosition.PositionLon], 18)
+        }
+    })
+
+
+
 }
 
 
@@ -85,7 +130,6 @@ function showExit(stat){
 window.onload = () => {
     initMap()
     initDataSource()
-
 
 
 }
