@@ -5,7 +5,7 @@ const monstData = [
     {
         id: "",
         type: "A",
-        hp: 1,
+        hp: 10,
         armor: 0,
         speed: 1,
         img: "./image/poo-solid.svg"
@@ -13,7 +13,7 @@ const monstData = [
     {
         id: "",
         type: "B",
-        hp: 1,
+        hp: 8,
         armor: 1,
         speed: 2,
         img: "./image/robot-solid.svg"
@@ -21,7 +21,7 @@ const monstData = [
     {
         id: "",
         type: "C",
-        hp: 2,
+        hp: 3,
         armor: 0,
         speed: 3,
         img: "./image/optin-monster.svg"
@@ -29,7 +29,7 @@ const monstData = [
     {
         id: "",
         type: "D",
-        hp: 3,
+        hp: 1,
         armor: 0,
         speed: 4,
         img: "./image/ghost-solid.svg"
