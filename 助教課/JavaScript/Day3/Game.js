@@ -448,7 +448,7 @@ function attackMonst() {
     mhp--;
     monst.setAttribute("data-monsthp", mhp);
     if (mhp <= 0) {
-        document.querySelector(`[data-monstid="${monst.dataset.monstid}"]`).parentNode.innerHTML = "";
+        event.target.parentNode.removeChild(event.target);
         mCounter--;
         while (mCounter == 0) {
             gameFinish()
@@ -463,10 +463,10 @@ function gameFinish() {
     startBtn.disabled = false;
     level++;
     mCounter = 0;
-    arrowMove.ArrowUp = false
-    arrowMove.ArrowDown = false
-    arrowMove.ArrowLeft = false
-    arrowMove.ArrowRight = false
+    // arrowMove.ArrowUp = false
+    // arrowMove.ArrowDown = false
+    // arrowMove.ArrowLeft = false
+    // arrowMove.ArrowRight = false
     checkKey()
     renderPage()
 }
@@ -492,7 +492,7 @@ window.onload = function () {
     loadRecord()
     startBtn.addEventListener("click", function clearPreviousMonst() {
         console.log(level);
-        createMonstOBJ(`${level + 4}`);
+        createMonstOBJ(`${level+4}`);
         start();
         startBtn.disabled = true;
         renderPage()

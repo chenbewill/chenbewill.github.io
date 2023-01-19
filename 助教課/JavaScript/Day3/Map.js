@@ -1,6 +1,6 @@
 //宣告
-let dataSouceMRT_Station=[];
-let dataSouceMRT_Exits=[];
+let dataSouceMRT_Station = [];
+let dataSouceMRT_Exits = [];
 let dataSouceUBike;
 let markers = L.markerClusterGroup()//marker叢集
 
@@ -18,6 +18,8 @@ function initMap() {
     let osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
     let osm = new L.TileLayer(osmUrl, { minZoom: 8, maxZoom: 19 });
     map.addLayer(osm)
+    map.on("zoom", zoomMap);
+
 }
 function initDataSource() {
     let MRT_StationRequest = fetch("https://raw.githubusercontent.com/chenbewill/FileStorage/main/MRT_Station");
@@ -30,32 +32,32 @@ function initDataSource() {
         )
         .then((jsonArray) => {
             let MRT = [];
-            let EXIT =[];
+            let EXIT = [];
             [MRT, EXIT] = jsonArray
-          
+
             //排除重複資料
             MRT.forEach((stat, idx) => {
                 let index = MRT.findIndex((mrt) => mrt.StationName.Zh_tw == stat.StationName.Zh_tw)
                 if (idx != index) {
                     return
-                }else{
+                } else {
                     dataSouceMRT_Station.push(stat)
-                }         
+                }
             })
             EXIT.forEach((exit, idx) => {
                 let index = EXIT.findIndex((ext) => ext.ExitName.Zh_tw == exit.ExitName.Zh_tw)
                 if (idx != index) {
                     return
-                }else{
+                } else {
                     dataSouceMRT_Exits.push(exit)
-                }         
+                }
             })
-            
+
             dataSouceMRT_Station.forEach((stat) => {
                 stat["ExitInfo"] = []
                 dataSouceMRT_Exits.forEach(exit => {
                     if (exit.StationName.Zh_tw == stat.StationName.Zh_tw) {
-                        console.log(exit.StationName.Zh_tw, stat.StationName.Zh_tw)
+
                         if (exit.ExitInfo == undefined || exit.ExitInfo.LocationDescription == undefined) {
                             stat.ExitInfo.push({
                                 ExitID: exit.ExitID,
@@ -66,7 +68,7 @@ function initDataSource() {
                         }
                     }
                 })
-                console.log(stat)
+
             })
 
             renderStationMarker()
@@ -113,8 +115,8 @@ function showExit(sender) {
                 const li = document.createElement("li")
                 li.classList.add("border", "border-secondary", "p-3", "my-1", "rounded")
                 const p = document.createElement('p');
-                p.addEventListener("click", popUp)
                 p.innerHTML = `${exit.ExitName.Zh_tw}號</br>` + `地址:${exit.LocationDescription}`
+                p.addEventListener("click", popUp.bind(null, exit))
                 li.appendChild(p)
                 ul.appendChild(li);
             })
@@ -128,14 +130,16 @@ function renderExitMarker() {
     if (markers) {
         markers.clearLayers()
     }
-    dataSouceMRT_Station.forEach(stat => {
+    dataSouceMRT_Station.forEach((stat) => {
         if (stat.StationName.Zh_tw == StationArea.value) {
-            stat.ExitInfo.forEach(exit => {
+            stat.ExitInfo.forEach((exit,idx) => {
                 let marker = L.marker([exit.ExitPosition.PositionLat, exit.ExitPosition.PositionLon])
                 marker.bindPopup(`<h4>${exit.ExitName.Zh_tw}</h4>
-                                <p>${exit.LocationDescription}</p>
-                            `)
+                <p>${exit.LocationDescription}</p>
+                `)
+
                 markers.addLayer(marker)
+
             })
         }
     })
@@ -149,8 +153,17 @@ function renderExitMarker() {
 
 
 }
-function popUp() {
+function popUp(sender) {
+    debugger
+    //顯示pop的內容??
+}
 
+function zoomMap() {
+    if (map["_zoom"] < 13) {
+        renderStationMarker()
+    } else if (map["_zoom"] > 17) {
+        console.log(map["_animateToCenter"])
+    }
 
 }
 
@@ -158,7 +171,6 @@ function popUp() {
 window.onload = () => {
     initMap()
     initDataSource()
-
 
 }
 
