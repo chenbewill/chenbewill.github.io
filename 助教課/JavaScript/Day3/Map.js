@@ -1,6 +1,6 @@
 //宣告
-let dataSouceMRT_Station;
-let dataSouceMRT_Exits;
+let dataSouceMRT_Station=[];
+let dataSouceMRT_Exits=[];
 let dataSouceUBike;
 let markers = L.markerClusterGroup()//marker叢集
 
@@ -29,23 +29,46 @@ function initDataSource() {
         }
         )
         .then((jsonArray) => {
-            [dataSouceMRT_Station, dataSouceMRT_Exits] = jsonArray
+            let MRT = [];
+            let EXIT =[];
+            [MRT, EXIT] = jsonArray
+          
+            //排除重複資料
+            MRT.forEach((stat, idx) => {
+                let index = MRT.findIndex((mrt) => mrt.StationName.Zh_tw == stat.StationName.Zh_tw)
+                if (idx != index) {
+                    return
+                }else{
+                    dataSouceMRT_Station.push(stat)
+                }         
+            })
+            EXIT.forEach((exit, idx) => {
+                let index = EXIT.findIndex((ext) => ext.ExitName.Zh_tw == exit.ExitName.Zh_tw)
+                if (idx != index) {
+                    return
+                }else{
+                    dataSouceMRT_Exits.push(exit)
+                }         
+            })
+            
             dataSouceMRT_Station.forEach((stat) => {
                 stat["ExitInfo"] = []
-                //排除重複資料 待修正
-
                 dataSouceMRT_Exits.forEach(exit => {
-
                     if (exit.StationName.Zh_tw == stat.StationName.Zh_tw) {
-                        stat.ExitInfo.push({
-                            ExitID: exit.ExitID,
-                            ExitName: exit.ExitName,
-                            LocationDescription: exit.LocationDescription,
-                            ExitPosition: exit.ExitPosition
-                        })
+                        console.log(exit.StationName.Zh_tw, stat.StationName.Zh_tw)
+                        if (exit.ExitInfo == undefined || exit.ExitInfo.LocationDescription == undefined) {
+                            stat.ExitInfo.push({
+                                ExitID: exit.ExitID,
+                                ExitName: exit.ExitName,
+                                LocationDescription: exit.LocationDescription,
+                                ExitPosition: exit.ExitPosition
+                            })
+                        }
                     }
                 })
+                console.log(stat)
             })
+
             renderStationMarker()
             setSelection()
             StationArea.addEventListener("change", renderExitMarker)
@@ -64,7 +87,7 @@ function setSelection() {
 
 function renderStationMarker() {
     if (markers) {
-        // markers.clearLayers();
+        markers.clearLayers();
     }
     dataSouceMRT_Station.forEach((stat) => {
         let marker = L.marker([stat.StationPosition.PositionLat, stat.StationPosition.PositionLon])
@@ -80,18 +103,20 @@ function renderStationMarker() {
     })
     map.addLayer(markers)
 }
-function showExit() {
+function showExit(sender) {
     ExitArea.innerHTML = "";
     dataSouceMRT_Station.find(stat => {
         if (stat.StationName.Zh_tw == StationArea.value) {
             const ul = document.createElement("ul")
+            ul.classList.add("p-0", "mt-2")
             stat.ExitInfo.forEach((exit, idx) => {
-                const ExNameLi = document.createElement("li")
-                const AddressLi = document.createElement("li")
-                ExNameLi.innerText = `${exit.ExitName.Zh_tw}號`
-                ul.appendChild(ExNameLi);
-                AddressLi.innerText = `地址:${exit.LocationDescription}`;
-                ul.appendChild(AddressLi)
+                const li = document.createElement("li")
+                li.classList.add("border", "border-secondary", "p-3", "my-1", "rounded")
+                const p = document.createElement('p');
+                p.addEventListener("click", popUp)
+                p.innerHTML = `${exit.ExitName.Zh_tw}號</br>` + `地址:${exit.LocationDescription}`
+                li.appendChild(p)
+                ul.appendChild(li);
             })
             ExitArea.appendChild(ul)
         }
@@ -124,7 +149,10 @@ function renderExitMarker() {
 
 
 }
+function popUp() {
 
+
+}
 
 //window.onload
 window.onload = () => {
