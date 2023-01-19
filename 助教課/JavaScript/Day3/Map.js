@@ -163,7 +163,7 @@ function renderExitMarker() {
 
 
 function zoomMap() {
-    if (map["_zoom"] < 15) {
+    if (map["_zoom"] < 16) {
         renderStationMarker()
     } else if (map["_zoom"] > 17) {
         console.log(map["_animateToCenter"])
