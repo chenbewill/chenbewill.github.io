@@ -91,17 +91,23 @@ function renderStationMarker() {
     if (markers) {
         markers.clearLayers();
     }
-    dataSouceMRT_Station.forEach((stat) => {
+    dataSouceMRT_Station.forEach((stat, idx) => {
         let marker = L.marker([stat.StationPosition.PositionLat, stat.StationPosition.PositionLon])
+        marker.addEventListener("mouseover", function () {
+            marker.bindPopup(
+                `
+                 <h4>捷運站名:${stat.StationName.Zh_tw}</h4>
+                 <p>地址:${stat.StationAddress}</p>
+                 <p>捷運出口數量:${stat.ExitInfo.length}</p>
+                 `
+            ).openPopup();
+        })
+        marker.addEventListener("click", function () {
+            StationArea.selectedIndex = (idx + 1);
+            renderExitMarker();
+            showExit();
+        })
         markers.addLayer(marker)
-        marker.bindPopup(
-            `
-            <h4>捷運站名:${stat.StationName.Zh_tw}</h4>
-            <p>地址:${stat.StationAddress}</p>
-            <p>捷運出口數量:${stat.ExitInfo.length}</p>
-            `
-        )
-        // marker.addEventListener("click", showExit.bind(null, stat))
     })
     map.addLayer(markers)
 }
@@ -116,7 +122,6 @@ function showExit(sender) {
                 li.classList.add("border", "border-secondary", "p-3", "my-1", "rounded")
                 const p = document.createElement('p');
                 p.innerHTML = `${exit.ExitName.Zh_tw}號</br>` + `地址:${exit.LocationDescription}`
-                p.addEventListener("click", popUp.bind(null, exit))
                 li.appendChild(p)
                 ul.appendChild(li);
             })
@@ -132,12 +137,14 @@ function renderExitMarker() {
     }
     dataSouceMRT_Station.forEach((stat) => {
         if (stat.StationName.Zh_tw == StationArea.value) {
-            stat.ExitInfo.forEach((exit,idx) => {
+            stat.ExitInfo.forEach((exit, idx) => {
                 let marker = L.marker([exit.ExitPosition.PositionLat, exit.ExitPosition.PositionLon])
-                marker.bindPopup(`<h4>${exit.ExitName.Zh_tw}</h4>
-                <p>${exit.LocationDescription}</p>
-                `)
-
+                marker.addEventListener("mouseover", function () {
+                    marker.bindPopup(
+                        `<h4>${exit.ExitName.Zh_tw}</h4>
+                    <p>${exit.LocationDescription}</p>
+                    `).openPopup();
+                })
                 markers.addLayer(marker)
 
             })
@@ -153,13 +160,10 @@ function renderExitMarker() {
 
 
 }
-function popUp(sender) {
-    debugger
-    //顯示pop的內容??
-}
+
 
 function zoomMap() {
-    if (map["_zoom"] < 13) {
+    if (map["_zoom"] < 15) {
         renderStationMarker()
     } else if (map["_zoom"] > 17) {
         console.log(map["_animateToCenter"])
