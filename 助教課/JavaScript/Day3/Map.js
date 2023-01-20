@@ -119,7 +119,7 @@ function showExit(sender) {
             ul.classList.add("p-0", "mt-2")
             stat.ExitInfo.forEach((exit, idx) => {
                 const li = document.createElement("li")
-                li.classList.add("border", "border-secondary", "p-3", "my-1", "rounded")
+                li.classList.add("border", "border-secondary", "p-2", "my-1", "rounded")
                 const p = document.createElement('p');
                 p.innerHTML = `${exit.ExitName.Zh_tw}號</br>` + `地址:${exit.LocationDescription}`
                 li.appendChild(p)
