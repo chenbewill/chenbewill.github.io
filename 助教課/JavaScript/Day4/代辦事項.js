@@ -1,5 +1,5 @@
 //宣告
-let myStorage = window.localStorage;
+const myStorage = window.localStorage;
 let localData = [
     // {
     //     state:"",
@@ -36,9 +36,9 @@ function loadStorage() {
     }
 }
 function renderToDoList(e, item, idx) {
-    let state = item.state;
-    let title = item.title;
-    let text = item.detials;
+    const state = item.state;
+    const title = item.title;
+    const text = item.detials;
     if (text.length == 0) {
         text = "請輸入詳細內容";
     }
@@ -100,10 +100,9 @@ function renderToDoList(e, item, idx) {
     addTitle.value = '';
 }
 function tick(event) {
-    let li = event.target.parentNode.parentNode.parentNode;
-    debugger
-    let input = event.target;
-    let index = li.dataset.idx;
+    const li = event.target.parentNode.parentNode.parentNode;
+    const input = event.target;
+    const index = li.dataset.idx;
     if(input.checked){
         localData[index].state = true ;
     }else{
@@ -114,18 +113,18 @@ function tick(event) {
     event.stopPropagation();
 }
 function Save(event) {
-    let parent = event.target.parentNode.parentNode;
-    let saveBtn = event.target;
-    let editBtn = parent.querySelector(".btn-warning");
-    let content = parent.querySelector('.text');
+    const parent = event.target.parentNode.parentNode;
+    const saveBtn = event.target;
+    const editBtn = parent.querySelector(".btn-warning");
+    const content = parent.querySelector('.text');
     content.setAttribute("readonly", "");
     content.classList.remove("border","border-secondary","border-2");
     saveBtn.classList.add("d-none");
     editBtn.classList.remove("d-none");
-    let label=parent.querySelector("label");
-    let input = parent.querySelector("input");
-    let li = parent.parentNode;
-    let todoTitle = li.querySelector("p");
+    const label=parent.querySelector("label");
+    const input = parent.querySelector("input");
+    const li = parent.parentNode;
+    const todoTitle = li.querySelector("p");
     todoTitle.innerText = input.value;
     localData[li.dataset.idx].detials = content.value;
     localData[li.dataset.idx].title = input.value;
@@ -134,11 +133,11 @@ function Save(event) {
     input.remove();
 }
 function Edit(event) {
-    let editBtn = event.target;
-    let parent = event.target.parentNode.parentNode;
-    let saveBtn = parent.querySelector(".btn-success");
-    let content = parent.querySelector('.text');
-    let todoTitle = parent.parentNode.querySelector("p");
+    const editBtn = event.target;
+    const parent = event.target.parentNode.parentNode;
+    const saveBtn = parent.querySelector(".btn-success");
+    const content = parent.querySelector('.text');
+    const todoTitle = parent.parentNode.querySelector("p");
     content.removeAttribute("readonly");
     content.removeAttribute("disabled");
     content.classList.add("border","border-secondary","border-2");
@@ -154,13 +153,14 @@ function Edit(event) {
     parent.insertBefore(input, content);
 }
 function Delete(event) {
-    let li = event.target.parentNode.parentNode.parentNode;
-    let index = li.dataset.idx;
-    debugger
+    const li = event.target.parentNode.parentNode.parentNode;
+    const index = li.dataset.idx;
     localData.splice(index, 1);
-    console.log(localData);
-    pushLocalData();
     li.remove();
+    console.log(localData);
+    console.log(myStorage);
+    pushLocalData();
+    loadStorage();
 }
 function openDetail(event) {
     let target = event.target.parentNode.parentNode;
@@ -178,8 +178,6 @@ function pushLocalData() {
 window.onload = () => {
     loadStorage()
     addBTN.onclick = addStorage;
-
-
 }
 
 // function cloneAdd() {
