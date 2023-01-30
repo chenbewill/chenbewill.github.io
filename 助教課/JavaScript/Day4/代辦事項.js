@@ -12,14 +12,14 @@ let localData = [
 addTitle = document.querySelector("input");
 addBTN = document.querySelector("#button-add");
 toDoList = document.querySelector("#todolist");
-//添加local遭廖
+//添加local資料
 function addStorage() {
     let data = {
         state: false,
         title: "無名標題",
         detials: "請輸入詳細內容"
     }
-    if (addTitle.value.length == 0) {
+    if (addTitle.value.length != 0) {
         data.title = addTitle.value;
     }
     localData.push(data);
@@ -118,17 +118,17 @@ function tick(event) {
 }
 // 保存
 function save(event) {
-    const parent = event.target.parentNode.parentNode;
+    const accordDiv = event.target.parentNode.parentNode;
     const saveBtn = event.target;
-    const editBtn = parent.querySelector(".btn-warning");
-    const content = parent.querySelector('.text');
+    const editBtn = accordDiv.querySelector(".btn-warning");
+    const content = accordDiv.querySelector('.text');
     content.setAttribute("readonly", "");
     content.classList.remove("border", "border-secondary", "border-2");
     saveBtn.classList.add("d-none");
     editBtn.classList.remove("d-none");
-    const label = parent.querySelector("label");
-    const input = parent.querySelector("input");
-    const li = parent.parentNode;
+    const label = accordDiv.querySelector("label");
+    const input = accordDiv.querySelector("input");
+    const li = accordDiv.parentNode;
     const todoTitle = li.querySelector("p");
     todoTitle.innerText = input.value;
     localData[li.dataset.idx].detials = content.value;
@@ -155,7 +155,7 @@ function edit(event) {
     let input = document.createElement("input");
     input.placeholder = "修改標題";
     input.value = todoTitle.innerText;
-    parent.insertBefore(label, content);
+    parent.prepend(label);
     parent.insertBefore(input, content);
 }
 // 刪除
