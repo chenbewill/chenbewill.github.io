@@ -1,5 +1,6 @@
 //宣告
 const myStorage = window.localStorage;
+const storageDataName = "data";
 let localData = [
     // {
     //     state:"",
@@ -11,20 +12,21 @@ let localData = [
 addTitle = document.querySelector("input");
 addBTN = document.querySelector("#button-add");
 toDoList = document.querySelector("#todolist");
+//添加local遭廖
 function addStorage() {
-    if (addTitle.value.length == 0) {
-        addTitle.value = "無名標題";
-    }
     let data = {
         state: false,
-        title: addTitle.value,
+        title: "無名標題",
         detials: "請輸入詳細內容"
+    }
+    if (addTitle.value.length == 0) {
+        data.title = addTitle.value;
     }
     localData.push(data);
     pushLocalData()
     loadStorage();
 }
-//渲染畫面
+//讀取local資料
 function loadStorage() {
     toDoList.innerHTML = "";
     if (myStorage.getItem("data") != null) {
@@ -35,6 +37,7 @@ function loadStorage() {
         })
     }
 }
+//渲染todolist
 function renderToDoList(e, item, idx) {
     const state = item.state;
     const title = item.title;
@@ -62,33 +65,33 @@ function renderToDoList(e, item, idx) {
     divTitle.append(input, p);
     let h2 = document.createElement('h2');
     h2.classList.add('accordion-header');
-  
+
     h2.addEventListener('click', openDetail);
     h2.appendChild(divTitle);
     //內容
     let textDetails = document.createElement('textarea');
     textDetails.classList.add('text', 'col-12');
-    textDetails.setAttribute("disabled","");
+    textDetails.setAttribute("disabled", "");
     textDetails.innerText = text;
     //按鈕
     let btnSave = document.createElement('button');
     btnSave.classList.add("btn", "btn-success", "d-none");
-    btnSave.addEventListener("click", Save);
+    btnSave.addEventListener("click", save);
     btnSave.innerText = '保存';
     let btnEdit = document.createElement('button');
     btnEdit.classList.add("btn", "btn-warning");
-    btnEdit.addEventListener('click', Edit);
+    btnEdit.addEventListener('click', edit);
     btnEdit.innerText = '編輯';
     let btnDelete = document.createElement('button');
     btnDelete.classList.add("btn", "btn-danger");
-    btnDelete.addEventListener('click', Delete);
+    btnDelete.addEventListener('click', remove);
     btnDelete.innerText = '刪除';
     //按鈕容器
     let divBTN = document.createElement('div');
-    divBTN.classList.add('btn-action','text-end');
+    divBTN.classList.add('btn-action', 'text-end');
     divBTN.append(btnSave, btnEdit, btnDelete);
     let divBody = document.createElement('div');
-    divBody.classList.add("accordion-collapse", "collapse", "accordion-body","py-1");
+    divBody.classList.add("accordion-collapse", "collapse", "accordion-body", "py-1");
     divBody.setAttribute('data-bs-parent', "#todolist");
     divBody.append(textDetails, divBTN);
     let li = document.createElement('li');
@@ -99,29 +102,31 @@ function renderToDoList(e, item, idx) {
     toDoList.appendChild(li);
     addTitle.value = '';
 }
+//打勾
 function tick(event) {
     const li = event.target.parentNode.parentNode.parentNode;
     const input = event.target;
     const index = li.dataset.idx;
-    if(input.checked){
-        localData[index].state = true ;
-    }else{
+    if (input.checked) {
+        localData[index].state = true;
+    } else {
         localData[index].state = false;
     }
     pushLocalData()
     loadStorage()
     event.stopPropagation();
 }
-function Save(event) {
+// 保存
+function save(event) {
     const parent = event.target.parentNode.parentNode;
     const saveBtn = event.target;
     const editBtn = parent.querySelector(".btn-warning");
     const content = parent.querySelector('.text');
     content.setAttribute("readonly", "");
-    content.classList.remove("border","border-secondary","border-2");
+    content.classList.remove("border", "border-secondary", "border-2");
     saveBtn.classList.add("d-none");
     editBtn.classList.remove("d-none");
-    const label=parent.querySelector("label");
+    const label = parent.querySelector("label");
     const input = parent.querySelector("input");
     const li = parent.parentNode;
     const todoTitle = li.querySelector("p");
@@ -132,7 +137,8 @@ function Save(event) {
     label.remove();
     input.remove();
 }
-function Edit(event) {
+// 編輯
+function edit(event) {
     const editBtn = event.target;
     const parent = event.target.parentNode.parentNode;
     const saveBtn = parent.querySelector(".btn-success");
@@ -140,19 +146,20 @@ function Edit(event) {
     const todoTitle = parent.parentNode.querySelector("p");
     content.removeAttribute("readonly");
     content.removeAttribute("disabled");
-    content.classList.add("border","border-secondary","border-2");
+    content.classList.add("border", "border-secondary", "border-2");
     saveBtn.classList.remove("d-none");
     editBtn.classList.add("d-none");
     //修改標題
     let label = document.createElement('label');
-    label.innerText="標題";
+    label.innerText = "標題";
     let input = document.createElement("input");
     input.placeholder = "修改標題";
     input.value = todoTitle.innerText;
-    parent.insertBefore(label,content);
+    parent.insertBefore(label, content);
     parent.insertBefore(input, content);
 }
-function Delete(event) {
+// 刪除
+function remove(event) {
     const li = event.target.parentNode.parentNode.parentNode;
     const index = li.dataset.idx;
     localData.splice(index, 1);
@@ -162,6 +169,7 @@ function Delete(event) {
     pushLocalData();
     loadStorage();
 }
+// 開啟詳細資料
 function openDetail(event) {
     let target = event.target.parentNode.parentNode;
     if (event.target.localName != "div") {
@@ -171,8 +179,9 @@ function openDetail(event) {
     content.classList.toggle('show');
     event.stopPropagation();
 }
+//更新local
 function pushLocalData() {
-    myStorage.setItem("data", JSON.stringify(localData));
+    myStorage.setItem(storageDataName, JSON.stringify(localData));
 }
 
 window.onload = () => {
