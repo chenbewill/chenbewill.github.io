@@ -72,6 +72,7 @@ function renderToDoList(e, item, idx) {
     let textDetails = document.createElement('textarea');
     textDetails.classList.add('text', 'col-12');
     textDetails.setAttribute("disabled", "");
+    textDetails.addEventListener("keyup", textAreaHeight);
     textDetails.innerText = text;
     //按鈕
     let btnSave = document.createElement('button');
@@ -131,6 +132,7 @@ function save(event) {
     const li = accordDiv.parentNode;
     const todoTitle = li.querySelector("p");
     todoTitle.innerText = input.value;
+    //待處理為\n
     localData[li.dataset.idx].detials = content.value;
     localData[li.dataset.idx].title = input.value;
     pushLocalData();
@@ -164,8 +166,6 @@ function remove(event) {
     const index = li.dataset.idx;
     localData.splice(index, 1);
     li.remove();
-    console.log(localData);
-    console.log(myStorage);
     pushLocalData();
     loadStorage();
 }
@@ -188,7 +188,13 @@ window.onload = () => {
     loadStorage()
     addBTN.onclick = addStorage;
 }
-
+function textAreaHeight(event) {
+    while (event.key == "Enter") {
+        let textArea = event.target;
+        textArea.style.height = (textArea.scrollHeight)+"px";
+        break;
+    }
+}
 // function cloneAdd() {
 //     //怎樣用????
 //     let temp = document.querySelector('template');
